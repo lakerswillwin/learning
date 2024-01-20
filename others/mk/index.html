@@ -275,7 +275,16 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      杂碎
+      部署站点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-problrms" class="md-nav__link">
+    <span class="md-ellipsis">
+      some problrms
     </span>
   </a>
   
@@ -402,7 +411,16 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      杂碎
+      部署站点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-problrms" class="md-nav__link">
+    <span class="md-ellipsis">
+      some problrms
     </span>
   </a>
   
@@ -425,7 +443,50 @@
 
   <h1>others</h1>
 
-<h3 id="_1">杂碎</h3>
+<h3 id="_1">部署站点</h3>
+<p>当你尽心尽力地输出文档后，你不希望这些内容只能自己在本地看吧，你还是希望将这些文档部署到服务器上，让其他人也能看。本小节就讲解如何部署文档到服务器上。</p>
+<p>首先来认识一个命令:</p>
+<pre><code class="language-cpp">mkdocs build
+</code></pre>
+<p>这个命令会在learn-mkdocs目录下生成一个目录site，这个目录中包含了静态站点的页面内容。
+我们可以在GitHub中创建一个仓库，名为mymkdocs。
+然后在learn-mkdocs下打开git，并将当前目录设置为一个仓库，然后与GitHub新创建的仓库mymkdocs连接：</p>
+<pre><code>git init
+git remote add origin https://github.com/xxxxx/mymkdocs.git
+</code></pre>
+<p>然后在相应目录下（整个想要部署到站点的原项目的目录）打开终端，输入以下命令：</p>
+<pre><code>mkdocs gh-deploy
+</code></pre>
+<p>浏览器访问此命令后产生的链接即可。</p>
+<h3 id="some-problrms">some problrms</h3>
+<p>在操作过程中菜菜遇到了以下问题</p>
+<p>1 . unable to access 'https://github.com/xxxxx/xxxxx': Failed to connect to github.com port 443 after 2087 ms: Couldn't connect to server</p>
+<p>how to solve：</p>
+<p>分析：Git 所设端口与系统代理不一致，需重新设置。方法：
+打开设置，网络，查找代理，记录下当前系统代理的 IP 地址和端口号。
+并将git修改为自己的IP和端口号：</p>
+<blockquote>
+<p>for example</p>
+</blockquote>
+<pre><code>git config --global http.proxy http://127.0.0.1:7890(注意是自己的IP与端口号)
+git config --global https.proxy http://127.0.0.1:7890
+</code></pre>
+<p>2 .   could not read Username for 'https://github.com': No such file or directory</p>
+<p>how to solve:</p>
+<p>分析：菜菜自己是因为SSH Key 已经过期需要重新建一个。方法：
+右击git bash 命令行输入：</p>
+<pre><code>$ git config --global user.name “li” //配置用户名
+$ git config --global user.email “123@163.com”  //配置用户邮箱地址
+</code></pre>
+<p>生成公钥和私钥，命令行输入:</p>
+<pre><code>ssh-keygen -t rsa -C &quot;123@163.com&quot;
+</code></pre>
+<p>回车三次后，命令行输入：</p>
+<pre><code>cd ~/.ssh
+cat id_rsa.pub      ——查看公钥（将公钥复制保留，一会用到）
+</code></pre>
+<p>再打开github你自己的仓库，settings中的deploy keys
+将你刚刚生成的密钥复制粘贴，添加密钥即可。然后再重复部署站点的步骤就没有问题咯。</p>
 
 
 
