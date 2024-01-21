@@ -458,6 +458,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#快速幂" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速幂
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#一些常见的排序算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些常见的排序算法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -528,6 +546,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#快速幂" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速幂
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#一些常见的排序算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些常见的排序算法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -549,14 +585,10 @@
   <h1>算法基础</h1>
 
 <h3 id="hello-世界">hello 世界<a class="headerlink" href="#hello-世界" title="Permanent link"></a></h3>
-<ol>
-<li>序列一简单算法</li>
-</ol>
+<p>序列一简单算法</p>
 <p>首先这是一段引言，因为刚刚结束了大一上的学习，基本掌握了C语言的语法。虽然自己谈不上精通
    但是基本上的语法结构和细节问题已比较清楚。但是，发现自己与大陆的其他一梯队的同学在ACM上存在一定差距，在此进行常见算法总结并附上一些解决原码。</p>
-<ol>
-<li>快速幂</li>
-</ol>
+<h3 id="快速幂">快速幂<a class="headerlink" href="#快速幂" title="Permanent link"></a></h3>
 <p>计算幂这一个话题，在c语言的math.h标准库中存在pow函数，但是在实际运用中，常常处理的数据
    比较大。我们发现，计算幂便由两个元素构成——即底数与指数。我们在这里联想到了折半寻找的思路，
    我们发现任意的数都可以由二进制的形式进行表达，如字面量（十进制）7表达为111，则<span class="arithmatex">\(7=2^2+2^1+1\)</span>,不妨设底数为3。则幂的表达式变成了<span class="arithmatex">\(result=3^1 * 3^2 * 3^4\)</span>,观察此表达式我们不难发现。当某个数的二进制表达式在该位为零时，则此时结果不参与运算仅仅“底数”进行一个倍乘处理。</p>
@@ -609,9 +641,7 @@
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 </blockquote>
-<ol>
-<li>一些常见的排序算法</li>
-</ol>
+<h3 id="一些常见的排序算法">一些常见的排序算法<a class="headerlink" href="#一些常见的排序算法" title="Permanent link"></a></h3>
 <p>排序与查找c语言中解决问题的基础，现在就让我们简单地聊一聊排序。排序以算法的时间复杂度分类，譬如冒泡、选择、插入之流的时间复杂度为<span class="arithmatex">\(o(n^2)\)</span>,在实际问题的解决中当然是时间复杂度越低，效率越高。那么接下来我来谈一谈常见的快速排序与归并排序。</p>
 <blockquote>
 <p>for example
