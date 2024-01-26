@@ -850,11 +850,11 @@
 
   <h1>cs61a</h1>
 
-<h3 id="introduction">introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h3>
+<h2 id="introduction">introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h2>
 <p>cs61a-one of the best choices for cs biginners</p>
-<h3 id="week1">week1<a class="headerlink" href="#week1" title="Permanent link"></a></h3>
-<h4 id="lectrue-1-functions">lectrue 1-functions<a class="headerlink" href="#lectrue-1-functions" title="Permanent link"></a></h4>
-<h5 id="lesson-1-names-assignment-and-user-defined-functions">lesson 1-Names, Assignment, and User-Defined Functions<a class="headerlink" href="#lesson-1-names-assignment-and-user-defined-functions" title="Permanent link"></a></h5>
+<h2 id="week1">week1<a class="headerlink" href="#week1" title="Permanent link"></a></h2>
+<h3 id="lectrue-1-functions">lectrue 1-functions<a class="headerlink" href="#lectrue-1-functions" title="Permanent link"></a></h3>
+<h4 id="lesson-1-names-assignment-and-user-defined-functions">lesson 1-Names, Assignment, and User-Defined Functions<a class="headerlink" href="#lesson-1-names-assignment-and-user-defined-functions" title="Permanent link"></a></h4>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1009,16 +1009,115 @@ discussion question1</p>
 3
 </details>
 
-<h5 id="lession-2-environment-diagrams">lession 2-Environment Diagrams<a class="headerlink" href="#lession-2-environment-diagrams" title="Permanent link"></a></h5>
+<h4 id="lession-2-environment-diagrams">lession 2-Environment Diagrams<a class="headerlink" href="#lession-2-environment-diagrams" title="Permanent link"></a></h4>
 <p>learn to use python online tutor</p>
 <p>这个网站好用咧<a href="https://pythontutor.com/python-compiler.html#mode=edit">https://pythontutor.com/python-compiler.html#mode=edit</a></p>
 <p>同样地该网站也方便c的调试</p>
-<h5 id="lession-3-defining-functions">lession 3-Defining Functions<a class="headerlink" href="#lession-3-defining-functions" title="Permanent link"></a></h5>
-<h4 id="lectrue-2-control-and-iteration">lectrue 2-Control and Iteration<a class="headerlink" href="#lectrue-2-control-and-iteration" title="Permanent link"></a></h4>
-<h5 id="lession-1-print-and-none">lession 1-Print and None<a class="headerlink" href="#lession-1-print-and-none" title="Permanent link"></a></h5>
+<p><img alt="⛺" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26fa.svg" title=":tent:" />插入一条广告 功能强大的python shell——ipython
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>pip install ipython
+</code></pre></div></td></tr></table></div>
+使用时（这对windows用户）windows+r 输入ipython即可</p>
+<h4 id="lession-3-defining-functions">lession 3-Defining Functions<a class="headerlink" href="#lession-3-defining-functions" title="Permanent link"></a></h4>
+<h3 id="lectrue-2-control-and-iteration">lectrue 2-Control and Iteration<a class="headerlink" href="#lectrue-2-control-and-iteration" title="Permanent link"></a></h3>
+<h4 id="lession-1-print-and-none">lession 1-Print and None<a class="headerlink" href="#lession-1-print-and-none" title="Permanent link"></a></h4>
 <p>打印
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>
-</code></pre></div></td></tr></table></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="mi">1</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="mi">2</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kc">None</span> <span class="kc">None</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="kc">None</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+expression:
+None represents nothing in python.a function that does not explicitly return a value will return None in python</p>
+<p>careful:None is not displayed by the interpreter as the value of an expression
+ #### lession 2-Miscellaneous Python Features</p>
+<p>division
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">213</span><span class="o">/</span><span class="mi">10</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="mf">21.3</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">213</span><span class="o">//</span><span class="mi">10</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="mi">21</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">truediv</span><span class="p">,</span><span class="n">floordiv</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">truediv</span><span class="p">(</span><span class="mi">213</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="mf">21.3</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">floordiv</span><span class="p">(</span><span class="mi">213</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="mi">21</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="o">&gt;&gt;&gt;</span>
+</code></pre></div></td></tr></table></div>
+function can return multiple values
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">haveatry</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="o">...</span>   <span class="k">return</span> <span class="n">n</span><span class="o">/</span><span class="n">d</span><span class="p">,</span><span class="n">n</span><span class="o">//</span><span class="n">d</span><span class="p">,</span><span class="n">n</span><span class="o">%</span><span class="n">d</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">...</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">haveatry</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">(</span><span class="mf">2.3333333333333335</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">,</span><span class="n">tt</span><span class="p">,</span><span class="n">ttt</span><span class="o">=</span><span class="n">haveatry</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="mf">2.3333333333333335</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tt</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="mi">2</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ttt</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+some python featrues</p>
+<ul>
+<li>kill process
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></li>
+<li>in control of terminal
+  ```python
+  python  ex.py  """exacute the code"""
+  python -i ex.py """exacute the code and enter the python process"""
+  python -m doctest ex.py
+  python -m doctext -v ex.py
+  """very important in code by python.it is a way to debug in case of the next situation"""<blockquote>
+<p>for example
+  ``` python
+  def haveatry(n,d):
+    """</p>
+<blockquote>
+<blockquote>
+<p>a
+289.14285714285717
+b
+289
+c
+1
+    """
+    return n/d,n//d,n%d
+  ```
+  #### lession 3-Conditional statements</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
 
 
 
