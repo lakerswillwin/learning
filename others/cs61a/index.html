@@ -597,6 +597,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lession-4-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession 4-Iteration
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -851,6 +860,15 @@
   <a href="#lession-3-conditional-statements" class="md-nav__link">
     <span class="md-ellipsis">
       lession 3-Conditional statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession-4-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession 4-Iteration
     </span>
   </a>
   
@@ -1182,7 +1200,54 @@ some python featrues</p>
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="o">...</span>   <span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="o">...</span>     <span class="k">return</span> <span class="n">x</span>
 </code></pre></div></td></tr></table></div></li>
+<li>boolean context</li>
 </ul>
+<p>'True' 'False' belong to boolean context,which are like '1' '0' in language C</p>
+<ul>
+<li>boolean operator
+'and' 'or' 'not' ,which are like '&amp;&amp;' '||' '!' in language C</li>
+</ul>
+<h4 id="lession-4-iteration">lession 4-Iteration<a class="headerlink" href="#lession-4-iteration" title="Permanent link"></a></h4>
+<p>to beign with let us show a basic statement</p>
+<blockquote>
+<p>for example
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span>
+<span class="normal"><a href="#__codelineno-15-8">8</a></span>
+<span class="normal"><a href="#__codelineno-15-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span><span class="p">,</span><span class="n">total</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">):</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="o">...</span>  <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="o">...</span>  <span class="n">total</span><span class="o">+=</span><span class="n">i</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="o">...</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="mi">3</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">total</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="mi">6</span>
+</code></pre></div></td></tr></table></div>
+then we will give an iteration example</p>
+</blockquote>
+<p><img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" /> dang dang dang</p>
+<p>the fibonacci sequence
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span>
+<span class="normal"><a href="#__codelineno-16-6">6</a></span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">def</span> <span class="nf">feb</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="n">pred</span><span class="p">,</span><span class="n">curr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>   <span class="o">...</span><span class="p">:</span>     <span class="n">k</span><span class="o">=</span><span class="mi">1</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">while</span><span class="p">(</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>   <span class="o">...</span><span class="p">:</span>         <span class="n">pred</span><span class="p">,</span><span class="n">curr</span><span class="o">=</span><span class="n">curr</span><span class="p">,</span><span class="n">pred</span><span class="o">+</span><span class="n">curr</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>   <span class="o">...</span><span class="p">:</span>         <span class="n">k</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">curr</span>
+</code></pre></div></td></tr></table></div>
+note: <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" /> previous code is written by ipython which is much better than python.Strong recommend</p>
 
 
 
