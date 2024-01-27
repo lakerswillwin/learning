@@ -1310,10 +1310,12 @@ here is some typical examples:</p>
 <a id="__codelineno-19-4" name="__codelineno-19-4"></a>
 <a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>  <span class="c1"># 存在默认值的参数</span>
 </code></pre></div></td></tr></table></div></li>
-<li>Enter any number of parameters:
+<li>
+<p>Enter any number of parameters:
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">z</span><span class="p">:</span> <span class="n">z</span>  <span class="c1"># *z传入的是任意个数的参数</span>
 </code></pre></div></td></tr></table></div>
-  here are some useful examples by using lambda functions:<blockquote>
+  here are some useful examples by using lambda functions:</p>
+<blockquote>
 <p>for example
   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
@@ -1346,10 +1348,64 @@ here is some typical examples:</p>
 <a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-21-16" name="__codelineno-21-16"></a>    <span class="mi">3</span>
+</code></pre></div></td></tr></table></div>
+  ### lab1</p>
+</blockquote>
+</li>
+<li>
+<p>example 1
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">def</span> <span class="nf">how_big</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;huge&#39;</span><span class="p">)</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>     <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>         <span class="k">return</span> <span class="s1">&#39;big&#39;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>     <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;small&#39;</span><span class="p">)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>     <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a> <span class="o">...</span><span class="p">:</span> <span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nothin&#39;&quot;</span><span class="p">)</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a> <span class="o">...</span><span class="p">:</span>
 </code></pre></div></td></tr></table></div></p>
+<blockquote>
+<p>question: how_big(12)
+<br />
+<details>
+<summary>answer</summary>
+huge
+</details></p>
 </blockquote>
 </li>
 </ul>
+<p>analyse: in python print can be used as a return statement in language C</p>
+<ul>
+<li>example 2
+ ``` python<blockquote>
+<blockquote>
+<blockquote>
+<p>positive = 28
+while positive: # If this loops forever, just type Infinite Loop
+...    print("positive?")
+...    positive -= 3
+ ```
+ 
+<details>
+<summary>answer</summary>
+infinite loop
+</details></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p>analyse: this is a typical example to distinguish python and C.That's because in C '1' and '0' are used as 'True' and 'False' in python</p>
 
 
 
