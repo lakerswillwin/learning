@@ -606,6 +606,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lession-5-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession 5-return
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -869,6 +878,15 @@
   <a href="#lession-4-iteration" class="md-nav__link">
     <span class="md-ellipsis">
       lession 4-Iteration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession-5-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession 5-return
     </span>
   </a>
   
@@ -1153,7 +1171,7 @@ some python featrues</p>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
 <span class="normal"><a href="#__codelineno-12-4">4</a></span>
 <span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">python</span>  <span class="n">ex</span><span class="o">.</span><span class="n">py</span>  <span class="s2">&quot;&quot;&quot;execute the code&quot;&quot;&quot;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">python</span> <span class="o">-</span><span class="n">i</span> <span class="n">ex</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;&quot;&quot;execute the code and enter the python process&quot;&quot;&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">python</span> <span class="o">-</span><span class="n">i</span> <span class="n">ex</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;&quot;&quot;execute the code and enter the python process    More important you can use functions in python process which are defined in this code&quot;&quot;&quot;</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">doctest</span> <span class="n">ex</span><span class="o">.</span><span class="n">py</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">doctext</span> <span class="o">-</span><span class="n">v</span> <span class="n">ex</span><span class="o">.</span><span class="n">py</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="sd">&quot;&quot;&quot;very important in code by python.it is a way to debug in case of the next situation&quot;&quot;&quot;</span>
@@ -1248,6 +1266,90 @@ then we will give an iteration example</p>
 <a id="__codelineno-16-7" name="__codelineno-16-7"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">curr</span>
 </code></pre></div></td></tr></table></div>
 note: <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" /> previous code is written by ipython which is much better than python.Strong recommend</p>
+<h4 id="lession-5-return">lession 5-return<a class="headerlink" href="#lession-5-return" title="Permanent link"></a></h4>
+<ul>
+<li>a return statement completes the evaluation of a call expression and provides its value</li>
+<li>only one return statement is ever executed while executing the body of the function</li>
+</ul>
+<p>next i will introduce a function---lambda
+* lambda 在Python编程中使用的频率非常高，我们通常提及的lambda表达式其实是python中的一类特殊的定义函数的形式，使用它可以定义一个匿名函数。即当你需要一个函数，但又不想费神去命名一个函数，这时候，就可以使用 lambda了。</p>
+<ul>
+<li>
+<p>the role of function lambda
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">lambda</span> <span class="p">[</span><span class="n">arg1</span> <span class="p">[,</span><span class="n">arg2</span><span class="p">,</span><span class="o">.....</span><span class="n">argn</span><span class="p">]]:</span><span class="n">expression</span>
+</code></pre></div></td></tr></table></div>
+here is some typical examples:</p>
+</li>
+<li>
+<p>Anonymous functions without parameters:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span>
+<span class="normal"><a href="#__codelineno-18-7">7</a></span>
+<span class="normal"><a href="#__codelineno-18-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="kc">True</span> 
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">()</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="kc">True</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="sd">&quot;&quot;&quot;which is equal to the next code &quot;&quot;&quot;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">func</span><span class="p">():</span> 
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>  <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">func</span><span class="p">()</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="kc">True</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>Anonymous functions with parameters:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>  <span class="c1"># 带有一个参数</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="c1"># 带有多个参数</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>  <span class="c1"># 存在默认值的参数</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Enter any number of parameters:
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">z</span><span class="p">:</span> <span class="n">z</span>  <span class="c1"># *z传入的是任意个数的参数</span>
+</code></pre></div></td></tr></table></div>
+  here are some useful examples by using lambda functions:<blockquote>
+<p>for example
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="mi">24</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="k">else</span> <span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="mi">2</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="c1"># 判断字符串是否以某个字母开头</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">))(</span><span class="s1">&#39;Bob&#39;</span><span class="p">))</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>  <span class="kc">True</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="c1"># 将lambda嵌套到普通函数中，lambda函数本身做为return的值</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="o">...</span>     <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">n</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="o">...</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>    <span class="mi">3</span>
+</code></pre></div></td></tr></table></div></p>
+</blockquote>
+</li>
+</ul>
 
 
 
