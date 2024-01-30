@@ -733,9 +733,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lession5-decorators" class="md-nav__link">
+  <a href="#lession5-decorator" class="md-nav__link">
     <span class="md-ellipsis">
-      lession5-decorators
+      lession5-decorator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectrue2-recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      lectrue2-Recursion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="lectrue2-Recursion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lession1-recursive-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession1-recursive functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession2-mutual-recusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession2-mutual recusion
     </span>
   </a>
   
@@ -1136,9 +1169,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lession5-decorators" class="md-nav__link">
+  <a href="#lession5-decorator" class="md-nav__link">
     <span class="md-ellipsis">
-      lession5-decorators
+      lession5-decorator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectrue2-recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      lectrue2-Recursion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="lectrue2-Recursion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lession1-recursive-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession1-recursive functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession2-mutual-recusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession2-mutual recusion
     </span>
   </a>
   
@@ -1992,7 +2058,97 @@ sum can calculate all members in list</li>
 <a id="__codelineno-35-8" name="__codelineno-35-8"></a>   <span class="mi">3</span>
 <a id="__codelineno-35-9" name="__codelineno-35-9"></a>   <span class="mi">6</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="lession5-decorators">lession5-decorators<a class="headerlink" href="#lession5-decorators" title="Permanent link"></a></h4>
+<h4 id="lession5-decorator">lession5-decorator<a class="headerlink" href="#lession5-decorator" title="Permanent link"></a></h4>
+<p>usually used to trace process
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">trace1</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="o">...</span>   <span class="k">def</span> <span class="nf">traced</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="o">...</span>       <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nihao&#39;</span><span class="p">,</span><span class="n">fn</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="o">...</span>       <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="o">...</span>   <span class="k">return</span> <span class="n">traced</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nd">@trace1</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="o">...</span> <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="o">...</span>    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="o">...</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a><span class="n">nihao</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">square</span> <span class="n">at</span> <span class="mh">0x00000218E20539A0</span><span class="o">&gt;</span> <span class="mi">11</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="mi">121</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="lectrue2-recursion">lectrue2-Recursion<a class="headerlink" href="#lectrue2-recursion" title="Permanent link"></a></h3>
+<h4 id="lession1-recursive-functions">lession1-recursive functions<a class="headerlink" href="#lession1-recursive-functions" title="Permanent link"></a></h4>
+<blockquote>
+<p>for example to calculate sum without a while statement
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span>
+<span class="normal"><a href="#__codelineno-37-7">7</a></span>
+<span class="normal"><a href="#__codelineno-37-8">8</a></span>
+<span class="normal"><a href="#__codelineno-37-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">32</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">sum_digits</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">sum_digits</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">33</span><span class="p">]:</span> <span class="n">sum_digits</span><span class="p">(</span><span class="mi">2023</span><span class="p">)</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="n">Out</span><span class="p">[</span><span class="mi">33</span><span class="p">]:</span> <span class="mi">7</span>
+</code></pre></div></td></tr></table></div></p>
+</blockquote>
+<h4 id="lession2-mutual-recusion">lession2-mutual recusion<a class="headerlink" href="#lession2-mutual-recusion" title="Permanent link"></a></h4>
+<ul>
+<li>example luhn algorithm <a href="https://zh.wikipedia.org/zh-cn/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95">https://zh.wikipedia.org/zh-cn/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-38-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-38-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-38-10">10</a></span>
+<span class="normal"><a href="#__codelineno-38-11">11</a></span>
+<span class="normal"><a href="#__codelineno-38-12">12</a></span>
+<span class="normal"><a href="#__codelineno-38-13">13</a></span>
+<span class="normal"><a href="#__codelineno-38-14">14</a></span>
+<span class="normal"><a href="#__codelineno-38-15">15</a></span>
+<span class="normal"><a href="#__codelineno-38-16">16</a></span>
+<span class="normal"><a href="#__codelineno-38-17">17</a></span>
+<span class="normal"><a href="#__codelineno-38-18">18</a></span>
+<span class="normal"><a href="#__codelineno-38-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>  <span class="n">In</span> <span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">luhn_sum</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">doubleluhn</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a>
+<a id="__codelineno-38-8" name="__codelineno-38-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">doubleluhn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-38-9" name="__codelineno-38-9"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-38-10" name="__codelineno-38-10"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-38-11" name="__codelineno-38-11"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-38-12" name="__codelineno-38-12"></a>    <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">luhn_sum</span><span class="p">(</span><span class="n">x</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="n">sum_digits</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="p">))</span>
+<a id="__codelineno-38-13" name="__codelineno-38-13"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-38-14" name="__codelineno-38-14"></a>
+<a id="__codelineno-38-15" name="__codelineno-38-15"></a><span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="n">luhn_sum</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-38-16" name="__codelineno-38-16"></a><span class="n">Out</span><span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="mi">4</span>
+<a id="__codelineno-38-17" name="__codelineno-38-17"></a>
+<a id="__codelineno-38-18" name="__codelineno-38-18"></a><span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">]:</span> <span class="n">luhn_sum</span><span class="p">(</span><span class="mi">94</span><span class="p">)</span>
+<a id="__codelineno-38-19" name="__codelineno-38-19"></a><span class="n">Out</span><span class="p">[</span><span class="mi">37</span><span class="p">]:</span> <span class="mi">13</span>
+</code></pre></div></td></tr></table></div>
 
 
 
