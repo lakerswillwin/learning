@@ -607,9 +607,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lession-5-return" class="md-nav__link">
+  <a href="#lession-5-return-and-lambda-expression" class="md-nav__link">
     <span class="md-ellipsis">
-      lession 5-return
+      lession 5-return and lambda expression
     </span>
   </a>
   
@@ -700,6 +700,42 @@
   <a href="#lession1-multiple-environment" class="md-nav__link">
     <span class="md-ellipsis">
       lession1-multiple environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession2-environments-for-higher-order-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession2-Environments for Higher-Order Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession3-environment-for-nested-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession3-environment for nested definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession4-self-refrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession4-self refrence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession5-decorators" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession5-decorators
     </span>
   </a>
   
@@ -974,9 +1010,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lession-5-return" class="md-nav__link">
+  <a href="#lession-5-return-and-lambda-expression" class="md-nav__link">
     <span class="md-ellipsis">
-      lession 5-return
+      lession 5-return and lambda expression
     </span>
   </a>
   
@@ -1067,6 +1103,42 @@
   <a href="#lession1-multiple-environment" class="md-nav__link">
     <span class="md-ellipsis">
       lession1-multiple environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession2-environments-for-higher-order-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession2-Environments for Higher-Order Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession3-environment-for-nested-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession3-environment for nested definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession4-self-refrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession4-self refrence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lession5-decorators" class="md-nav__link">
+    <span class="md-ellipsis">
+      lession5-decorators
     </span>
   </a>
   
@@ -1447,7 +1519,7 @@ then we will give an iteration example</p>
 <a id="__codelineno-16-7" name="__codelineno-16-7"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">curr</span>
 </code></pre></div></td></tr></table></div>
 note: <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" /> previous code is written by ipython which is much better than python.Strong recommend</p>
-<h4 id="lession-5-return">lession 5-return<a class="headerlink" href="#lession-5-return" title="Permanent link"></a></h4>
+<h4 id="lession-5-return-and-lambda-expression">lession 5-return and lambda expression<a class="headerlink" href="#lession-5-return-and-lambda-expression" title="Permanent link"></a></h4>
 <ul>
 <li>a return statement completes the evaluation of a call expression and provides its value</li>
 <li>only one return statement is ever executed while executing the body of the function</li>
@@ -1759,6 +1831,168 @@ sum can calculate all members in list</li>
 <h2 id="week2">week2<a class="headerlink" href="#week2" title="Permanent link"></a></h2>
 <h3 id="lectrue1-environment-diagrammes">lectrue1-environment diagrammes<a class="headerlink" href="#lectrue1-environment-diagrammes" title="Permanent link"></a></h3>
 <h4 id="lession1-multiple-environment">lession1-multiple environment<a class="headerlink" href="#lession1-multiple-environment" title="Permanent link"></a></h4>
+<blockquote>
+<p>example
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>  <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">square</span><span class="p">):</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">square</span><span class="o">*</span><span class="n">square</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a>  <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">square</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a>  <span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">121</span>
+</code></pre></div></td></tr></table></div></p>
+</blockquote>
+<h4 id="lession2-environments-for-higher-order-functions">lession2-Environments for Higher-Order Functions<a class="headerlink" href="#lession2-environments-for-higher-order-functions" title="Permanent link"></a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">haveatry</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">haveatry</span><span class="p">(</span><span class="n">square</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">81</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="lession3-environment-for-nested-definitions">lession3-environment for nested definitions<a class="headerlink" href="#lession3-environment-for-nested-definitions" title="Permanent link"></a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">make_adder</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>   <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">k</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">adder</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">tt</span><span class="o">=</span><span class="n">make_adder</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">tt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">5</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>local name causes error</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span>
+<span class="normal"><a href="#__codelineno-33-13">13</a></span>
+<span class="normal"><a href="#__codelineno-33-14">14</a></span>
+<span class="normal"><a href="#__codelineno-33-15">15</a></span>
+<span class="normal"><a href="#__codelineno-33-16">16</a></span>
+<span class="normal"><a href="#__codelineno-33-17">17</a></span>
+<span class="normal"><a href="#__codelineno-33-18">18</a></span>
+<span class="normal"><a href="#__codelineno-33-19">19</a></span>
+<span class="normal"><a href="#__codelineno-33-20">20</a></span>
+<span class="normal"><a href="#__codelineno-33-21">21</a></span>
+<span class="normal"><a href="#__codelineno-33-22">22</a></span>
+<span class="normal"><a href="#__codelineno-33-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">y</span><span class="o">+</span><span class="n">a</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="o">---------------------------------------------------------------------------</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="ne">NameError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13"></a><span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16"></a>      <span class="mi">1</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="o">----&gt;</span> <span class="mi">2</span>     <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-33-18" name="__codelineno-33-18"></a>
+<a id="__codelineno-33-19" name="__codelineno-33-19"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">g</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a>      <span class="mi">1</span> <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="o">----&gt;</span> <span class="mi">2</span>     <span class="k">return</span> <span class="n">y</span><span class="o">+</span><span class="n">a</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22"></a>
+<a id="__codelineno-33-23" name="__codelineno-33-23"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;y&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="lession4-self-refrence">lession4-self refrence<a class="headerlink" href="#lession4-self-refrence" title="Permanent link"></a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span>
+<span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<span class="normal"><a href="#__codelineno-34-15">15</a></span>
+<span class="normal"><a href="#__codelineno-34-16">16</a></span>
+<span class="normal"><a href="#__codelineno-34-17">17</a></span>
+<span class="normal"><a href="#__codelineno-34-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">19</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">printall</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a>    <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">printall</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="n">printall</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="mi">2</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="n">Out</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">printall</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="n">In</span> <span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="n">printall</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="mi">2</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="mi">3</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="n">Out</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">printall</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="n">printall</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="mi">2</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="mi">3</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="mi">4</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="n">Out</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">printall</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span>
+<span class="normal"><a href="#__codelineno-35-5">5</a></span>
+<span class="normal"><a href="#__codelineno-35-6">6</a></span>
+<span class="normal"><a href="#__codelineno-35-7">7</a></span>
+<span class="normal"><a href="#__codelineno-35-8">8</a></span>
+<span class="normal"><a href="#__codelineno-35-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">sum_print</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">def</span> <span class="nf">next_sum</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>   <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="n">sum_print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">next_sum</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>   <span class="o">...</span><span class="p">:</span> <span class="n">sum_print</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a>   <span class="mi">1</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>   <span class="mi">3</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a>   <span class="mi">6</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="lession5-decorators">lession5-decorators<a class="headerlink" href="#lession5-decorators" title="Permanent link"></a></h4>
 
 
 
