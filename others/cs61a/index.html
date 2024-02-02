@@ -1880,6 +1880,7 @@ huge
 infinite loop
 </details>
 <p>analyse: this is a typical example to distinguish python and C.That's because in C '1' and '0' are used as 'True' and 'False' in python</p>
+<p>but what should be noted that if '0' in python is treated as False only '0'</p>
 <h3 id="lectrue3-higher-older-functions">lectrue3-higher-older functions<a class="headerlink" href="#lectrue3-higher-older-functions" title="Permanent link"></a></h3>
 <h4 id="lession1-description">lession1-description<a class="headerlink" href="#lession1-description" title="Permanent link"></a></h4>
 <ul>
@@ -2945,6 +2946,84 @@ len can calculate the lenth in list</p>
 <li>inheritance</li>
 </ul>
 <p>inheritance is a method for relating classes together</p>
+<blockquote>
+<p>most behavior next is shared with the base calss account which means inheritance</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span>
+<span class="normal"><a href="#__codelineno-57-2">2</a></span>
+<span class="normal"><a href="#__codelineno-57-3">3</a></span>
+<span class="normal"><a href="#__codelineno-57-4">4</a></span>
+<span class="normal"><a href="#__codelineno-57-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="k">class</span> <span class="nc">checkingaccount</span><span class="p">(</span><span class="n">account</span><span class="p">):</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2"></a> <span class="n">withdraw_fee</span><span class="o">=</span><span class="mi">1</span>
+<a id="__codelineno-57-3" name="__codelineno-57-3"></a> <span class="n">intrest</span><span class="o">=</span><span class="mf">0.01</span>
+<a id="__codelineno-57-4" name="__codelineno-57-4"></a> <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">account</span><span class="p">):</span>
+<a id="__codelineno-57-5" name="__codelineno-57-5"></a>  <span class="k">return</span> <span class="n">account</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">account</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">withdraw_fee</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>object-oriented design</li>
+</ul>
+<p>designing for inheritance</p>
+<ul>
+<li>attribute look-up practice</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-58-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-58-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-58-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-58-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-58-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-58-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-58-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-58-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-58-10">10</a></span>
+<span class="normal"><a href="#__codelineno-58-11">11</a></span>
+<span class="normal"><a href="#__codelineno-58-12">12</a></span>
+<span class="normal"><a href="#__codelineno-58-13">13</a></span>
+<span class="normal"><a href="#__codelineno-58-14">14</a></span>
+<span class="normal"><a href="#__codelineno-58-15">15</a></span>
+<span class="normal"><a href="#__codelineno-58-16">16</a></span>
+<span class="normal"><a href="#__codelineno-58-17">17</a></span>
+<span class="normal"><a href="#__codelineno-58-18">18</a></span>
+<span class="normal"><a href="#__codelineno-58-19">19</a></span>
+<span class="normal"><a href="#__codelineno-58-20">20</a></span>
+<span class="normal"><a href="#__codelineno-58-21">21</a></span>
+<span class="normal"><a href="#__codelineno-58-22">22</a></span>
+<span class="normal"><a href="#__codelineno-58-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<a id="__codelineno-58-2" name="__codelineno-58-2"></a>  <span class="n">z</span><span class="o">=-</span><span class="mi">1</span>
+<a id="__codelineno-58-3" name="__codelineno-58-3"></a>  <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-58-4" name="__codelineno-58-4"></a>    <span class="k">return</span> <span class="n">B</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-58-5" name="__codelineno-58-5"></a><span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+<a id="__codelineno-58-6" name="__codelineno-58-6"></a>  <span class="n">n</span><span class="o">=</span><span class="mi">4</span>
+<a id="__codelineno-58-7" name="__codelineno-58-7"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-58-8" name="__codelineno-58-8"></a>    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
+<a id="__codelineno-58-9" name="__codelineno-58-9"></a>      <span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-58-10" name="__codelineno-58-10"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-58-11" name="__codelineno-58-11"></a>      <span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="o">=</span><span class="n">C</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-58-12" name="__codelineno-58-12"></a><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+<a id="__codelineno-58-13" name="__codelineno-58-13"></a>  <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-58-14" name="__codelineno-58-14"></a>    <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-58-15" name="__codelineno-58-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="n">A</span><span class="p">()</span>
+<a id="__codelineno-58-16" name="__codelineno-58-16"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="n">B</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-58-17" name="__codelineno-58-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span>
+<a id="__codelineno-58-18" name="__codelineno-58-18"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">n</span>
+<a id="__codelineno-58-19" name="__codelineno-58-19"></a><span class="mi">4</span>
+<a id="__codelineno-58-20" name="__codelineno-58-20"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">z</span><span class="o">==</span><span class="n">C</span><span class="o">.</span><span class="n">z</span> <span class="c1">#because of inheitance</span>
+<a id="__codelineno-58-21" name="__codelineno-58-21"></a><span class="kc">True</span>
+<a id="__codelineno-58-22" name="__codelineno-58-22"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">z</span><span class="o">==</span><span class="n">b</span><span class="o">.</span><span class="n">z</span>
+<a id="__codelineno-58-23" name="__codelineno-58-23"></a><span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>multiple inheritance</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span>
+<span class="normal"><a href="#__codelineno-59-2">2</a></span>
+<span class="normal"><a href="#__codelineno-59-3">3</a></span>
+<span class="normal"><a href="#__codelineno-59-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="k">class</span> <span class="nc">exampleaccount</span><span class="p">(</span><span class="n">checkingaccount</span><span class="p">,</span><span class="n">savingaccount</span><span class="p">):</span>
+<a id="__codelineno-59-2" name="__codelineno-59-2"></a>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">account_holder</span><span class="p">):</span>
+<a id="__codelineno-59-3" name="__codelineno-59-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">holder</span><span class="o">=</span><span class="n">account</span><span class="o">.</span><span class="n">holder</span>
+<a id="__codelineno-59-4" name="__codelineno-59-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="o">=</span><span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>analyse:both checkingaccount and savingaccoujnt base on account</p>
 
 
 
