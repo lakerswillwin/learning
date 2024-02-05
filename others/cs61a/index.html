@@ -862,6 +862,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#week4" class="md-nav__link">
+    <span class="md-ellipsis">
+      week4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lecture1-iterators-and-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      lecture1-iterators and generators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectrue2-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      lectrue2-efficiency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1387,6 +1420,39 @@
   <a href="#lectrue3-inheritance-and-string-representation" class="md-nav__link">
     <span class="md-ellipsis">
       lectrue3-inheritance and string representation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week4" class="md-nav__link">
+    <span class="md-ellipsis">
+      week4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lecture1-iterators-and-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      lecture1-iterators and generators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectrue2-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      lectrue2-efficiency
     </span>
   </a>
   
@@ -3045,6 +3111,350 @@ len can calculate the lenth in list</p>
 <a id="__codelineno-59-4" name="__codelineno-59-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="o">=</span><span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
 <p>analyse:both checkingaccount and savingaccoujnt base on account</p>
+<h2 id="week4">week4<a class="headerlink" href="#week4" title="Permanent link"></a></h2>
+<h3 id="lecture1-iterators-and-generators">lecture1-iterators and generators<a class="headerlink" href="#lecture1-iterators-and-generators" title="Permanent link"></a></h3>
+<ul>
+<li>iterator</li>
+</ul>
+<p>iter(iterable) :return an iterator over the elements of an iterable value</p>
+<p>next(iterator):return the next element in an iterator</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-60-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-60-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-60-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-60-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-60-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-60-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-60-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-60-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-60-10">10</a></span>
+<span class="normal"><a href="#__codelineno-60-11">11</a></span>
+<span class="normal"><a href="#__codelineno-60-12">12</a></span>
+<span class="normal"><a href="#__codelineno-60-13">13</a></span>
+<span class="normal"><a href="#__codelineno-60-14">14</a></span>
+<span class="normal"><a href="#__codelineno-60-15">15</a></span>
+<span class="normal"><a href="#__codelineno-60-16">16</a></span>
+<span class="normal"><a href="#__codelineno-60-17">17</a></span>
+<span class="normal"><a href="#__codelineno-60-18">18</a></span>
+<span class="normal"><a href="#__codelineno-60-19">19</a></span>
+<span class="normal"><a href="#__codelineno-60-20">20</a></span>
+<span class="normal"><a href="#__codelineno-60-21">21</a></span>
+<span class="normal"><a href="#__codelineno-60-22">22</a></span>
+<span class="normal"><a href="#__codelineno-60-23">23</a></span>
+<span class="normal"><a href="#__codelineno-60-24">24</a></span>
+<span class="normal"><a href="#__codelineno-60-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">s</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2"></a>
+<a id="__codelineno-60-3" name="__codelineno-60-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="o">---------------------------------------------------------------------------</span>
+<a id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<a id="__codelineno-60-6" name="__codelineno-60-6"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<a id="__codelineno-60-7" name="__codelineno-60-7"></a><span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-60-8" name="__codelineno-60-8"></a>
+<a id="__codelineno-60-9" name="__codelineno-60-9"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;list&#39;</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">iterator</span>
+<a id="__codelineno-60-10" name="__codelineno-60-10"></a>
+<a id="__codelineno-60-11" name="__codelineno-60-11"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">t</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-60-12" name="__codelineno-60-12"></a>
+<a id="__codelineno-60-13" name="__codelineno-60-13"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-60-14" name="__codelineno-60-14"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-60-15" name="__codelineno-60-15"></a>
+<a id="__codelineno-60-16" name="__codelineno-60-16"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-60-17" name="__codelineno-60-17"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-60-18" name="__codelineno-60-18"></a>
+<a id="__codelineno-60-19" name="__codelineno-60-19"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-60-20" name="__codelineno-60-20"></a><span class="o">---------------------------------------------------------------------------</span>
+<a id="__codelineno-60-21" name="__codelineno-60-21"></a><span class="ne">StopIteration</span>                             <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<a id="__codelineno-60-22" name="__codelineno-60-22"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<a id="__codelineno-60-23" name="__codelineno-60-23"></a><span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-60-24" name="__codelineno-60-24"></a>
+<a id="__codelineno-60-25" name="__codelineno-60-25"></a><span class="ne">StopIteration</span><span class="p">:</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>dictionary iteration</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-61-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-61-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-61-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-61-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-61-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-61-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-61-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-61-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-61-10">10</a></span>
+<span class="normal"><a href="#__codelineno-61-11">11</a></span>
+<span class="normal"><a href="#__codelineno-61-12">12</a></span>
+<span class="normal"><a href="#__codelineno-61-13">13</a></span>
+<span class="normal"><a href="#__codelineno-61-14">14</a></span>
+<span class="normal"><a href="#__codelineno-61-15">15</a></span>
+<span class="normal"><a href="#__codelineno-61-16">16</a></span>
+<span class="normal"><a href="#__codelineno-61-17">17</a></span>
+<span class="normal"><a href="#__codelineno-61-18">18</a></span>
+<span class="normal"><a href="#__codelineno-61-19">19</a></span>
+<span class="normal"><a href="#__codelineno-61-20">20</a></span>
+<span class="normal"><a href="#__codelineno-61-21">21</a></span>
+<span class="normal"><a href="#__codelineno-61-22">22</a></span>
+<span class="normal"><a href="#__codelineno-61-23">23</a></span>
+<span class="normal"><a href="#__codelineno-61-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">p</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;two&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-61-2" name="__codelineno-61-2"></a><span class="n">n</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="n">k</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a id="__codelineno-61-3" name="__codelineno-61-3"></a>
+<a id="__codelineno-61-4" name="__codelineno-61-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a id="__codelineno-61-5" name="__codelineno-61-5"></a><span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="mi">1</span>
+<a id="__codelineno-61-6" name="__codelineno-61-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">18</span><span class="p">]:</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;zero&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<a id="__codelineno-61-7" name="__codelineno-61-7"></a>
+<a id="__codelineno-61-8" name="__codelineno-61-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">19</span><span class="p">]:</span> <span class="n">k1</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-61-9" name="__codelineno-61-9"></a>
+<a id="__codelineno-61-10" name="__codelineno-61-10"></a><span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span>
+<a id="__codelineno-61-11" name="__codelineno-61-11"></a><span class="n">Out</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="s1">&#39;one&#39;</span>
+<a id="__codelineno-61-12" name="__codelineno-61-12"></a>
+<a id="__codelineno-61-13" name="__codelineno-61-13"></a><span class="n">In</span> <span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span>
+<a id="__codelineno-61-14" name="__codelineno-61-14"></a><span class="n">Out</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="s1">&#39;two&#39;</span>
+<a id="__codelineno-61-15" name="__codelineno-61-15"></a>
+<a id="__codelineno-61-16" name="__codelineno-61-16"></a><span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="n">p</span>
+<a id="__codelineno-61-17" name="__codelineno-61-17"></a><span class="n">Out</span><span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<a id="__codelineno-61-18" name="__codelineno-61-18"></a>
+<a id="__codelineno-61-19" name="__codelineno-61-19"></a><span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">k1</span><span class="p">)</span>
+<a id="__codelineno-61-20" name="__codelineno-61-20"></a><span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="s1">&#39;zero&#39;</span>
+<a id="__codelineno-61-21" name="__codelineno-61-21"></a><span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span> <span class="n">k2</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-61-22" name="__codelineno-61-22"></a>
+<a id="__codelineno-61-23" name="__codelineno-61-23"></a><span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<a id="__codelineno-61-24" name="__codelineno-61-24"></a><span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="s1">&#39;one&#39;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>for statement</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-62-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-62-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-62-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-62-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-62-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-62-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-62-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-62-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-62-10">10</a></span>
+<span class="normal"><a href="#__codelineno-62-11">11</a></span>
+<span class="normal"><a href="#__codelineno-62-12">12</a></span>
+<span class="normal"><a href="#__codelineno-62-13">13</a></span>
+<span class="normal"><a href="#__codelineno-62-14">14</a></span>
+<span class="normal"><a href="#__codelineno-62-15">15</a></span>
+<span class="normal"><a href="#__codelineno-62-16">16</a></span>
+<span class="normal"><a href="#__codelineno-62-17">17</a></span>
+<span class="normal"><a href="#__codelineno-62-18">18</a></span>
+<span class="normal"><a href="#__codelineno-62-19">19</a></span>
+<span class="normal"><a href="#__codelineno-62-20">20</a></span>
+<span class="normal"><a href="#__codelineno-62-21">21</a></span>
+<span class="normal"><a href="#__codelineno-62-22">22</a></span>
+<span class="normal"><a href="#__codelineno-62-23">23</a></span>
+<span class="normal"><a href="#__codelineno-62-24">24</a></span>
+<span class="normal"><a href="#__codelineno-62-25">25</a></span>
+<span class="normal"><a href="#__codelineno-62-26">26</a></span>
+<span class="normal"><a href="#__codelineno-62-27">27</a></span>
+<span class="normal"><a href="#__codelineno-62-28">28</a></span>
+<span class="normal"><a href="#__codelineno-62-29">29</a></span>
+<span class="normal"><a href="#__codelineno-62-30">30</a></span>
+<span class="normal"><a href="#__codelineno-62-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">27</span><span class="p">]:</span> <span class="n">r</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2"></a>
+<a id="__codelineno-62-3" name="__codelineno-62-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">28</span><span class="p">]:</span> <span class="n">r</span>
+<a id="__codelineno-62-4" name="__codelineno-62-4"></a><span class="n">Out</span><span class="p">[</span><span class="mi">28</span><span class="p">]:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-62-5" name="__codelineno-62-5"></a>
+<a id="__codelineno-62-6" name="__codelineno-62-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">29</span><span class="p">]:</span> <span class="n">ri</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-62-7" name="__codelineno-62-7"></a>
+<a id="__codelineno-62-8" name="__codelineno-62-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">ri</span><span class="p">:</span>
+<a id="__codelineno-62-9" name="__codelineno-62-9"></a>    <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a id="__codelineno-62-10" name="__codelineno-62-10"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-62-11" name="__codelineno-62-11"></a><span class="mi">3</span>
+<a id="__codelineno-62-12" name="__codelineno-62-12"></a><span class="mi">4</span>
+<a id="__codelineno-62-13" name="__codelineno-62-13"></a><span class="mi">5</span>
+<a id="__codelineno-62-14" name="__codelineno-62-14"></a>
+<a id="__codelineno-62-15" name="__codelineno-62-15"></a><span class="n">In</span> <span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">ri</span><span class="p">)</span>
+<a id="__codelineno-62-16" name="__codelineno-62-16"></a><span class="o">---------------------------------------------------------------------------</span>
+<a id="__codelineno-62-17" name="__codelineno-62-17"></a><span class="ne">StopIteration</span>                             <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<a id="__codelineno-62-18" name="__codelineno-62-18"></a><span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<a id="__codelineno-62-19" name="__codelineno-62-19"></a><span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">ri</span><span class="p">)</span>
+<a id="__codelineno-62-20" name="__codelineno-62-20"></a>
+<a id="__codelineno-62-21" name="__codelineno-62-21"></a><span class="ne">StopIteration</span><span class="p">:</span>
+<a id="__codelineno-62-22" name="__codelineno-62-22"></a><span class="n">In</span> <span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="n">ri</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-62-23" name="__codelineno-62-23"></a>
+<a id="__codelineno-62-24" name="__codelineno-62-24"></a><span class="n">In</span> <span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">ri</span><span class="p">)</span>
+<a id="__codelineno-62-25" name="__codelineno-62-25"></a><span class="n">Out</span><span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="mi">3</span>
+<a id="__codelineno-62-26" name="__codelineno-62-26"></a>
+<a id="__codelineno-62-27" name="__codelineno-62-27"></a><span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">ri</span><span class="p">:</span>
+<a id="__codelineno-62-28" name="__codelineno-62-28"></a>    <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<a id="__codelineno-62-29" name="__codelineno-62-29"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-62-30" name="__codelineno-62-30"></a><span class="mi">4</span>
+<a id="__codelineno-62-31" name="__codelineno-62-31"></a><span class="mi">5</span>
+</code></pre></div></td></tr></table></div>
+<p>analyse:when we take some tips to treat iterator as list or dictionary,they will convert to which and we should reaptedly do iter.</p>
+<ul>
+<li>built-in fuctions for iteration</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-63-1">1</a></span>
+<span class="normal"><a href="#__codelineno-63-2">2</a></span>
+<span class="normal"><a href="#__codelineno-63-3">3</a></span>
+<span class="normal"><a href="#__codelineno-63-4">4</a></span>
+<span class="normal"><a href="#__codelineno-63-5">5</a></span>
+<span class="normal"><a href="#__codelineno-63-6">6</a></span>
+<span class="normal"><a href="#__codelineno-63-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1"></a><span class="nb">map</span><span class="p">(</span><span class="n">fuc</span><span class="p">,</span><span class="n">iterable</span><span class="p">):</span> <span class="n">iterate</span> <span class="n">over</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iterator</span>
+<a id="__codelineno-63-2" name="__codelineno-63-2"></a><span class="nb">filter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">iterable</span><span class="p">):</span> <span class="n">iterate</span> <span class="n">over</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-63-3" name="__codelineno-63-3"></a><span class="nb">zip</span><span class="p">(</span><span class="n">first_iter</span><span class="p">,</span><span class="n">second_iter</span><span class="p">):</span><span class="n">iterate</span> <span class="n">over</span> <span class="n">co</span><span class="o">-</span><span class="n">indexed</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="n">pairs</span>
+<a id="__codelineno-63-4" name="__codelineno-63-4"></a><span class="nb">reversed</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span><span class="n">iterate</span> <span class="n">over</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">reversed_order</span>
+<a id="__codelineno-63-5" name="__codelineno-63-5"></a><span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span><span class="n">craet</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">containing</span> <span class="nb">all</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iterable</span>
+<a id="__codelineno-63-6" name="__codelineno-63-6"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iterable</span><span class="p">:):</span><span class="n">craet</span> <span class="n">a</span> <span class="nb">tuple</span> <span class="n">containing</span> <span class="nb">all</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iterable</span>
+<a id="__codelineno-63-7" name="__codelineno-63-7"></a><span class="nb">sorted</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span><span class="n">craet</span> <span class="n">a</span> <span class="nb">sorted</span> <span class="nb">list</span> <span class="n">containing</span>  <span class="n">x</span> <span class="ow">in</span> <span class="n">iterable</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>for example</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-64-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-64-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-64-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-64-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-64-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-64-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-64-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-64-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-64-10">10</a></span>
+<span class="normal"><a href="#__codelineno-64-11">11</a></span>
+<span class="normal"><a href="#__codelineno-64-12">12</a></span>
+<span class="normal"><a href="#__codelineno-64-13">13</a></span>
+<span class="normal"><a href="#__codelineno-64-14">14</a></span>
+<span class="normal"><a href="#__codelineno-64-15">15</a></span>
+<span class="normal"><a href="#__codelineno-64-16">16</a></span>
+<span class="normal"><a href="#__codelineno-64-17">17</a></span>
+<span class="normal"><a href="#__codelineno-64-18">18</a></span>
+<span class="normal"><a href="#__codelineno-64-19">19</a></span>
+<span class="normal"><a href="#__codelineno-64-20">20</a></span>
+<span class="normal"><a href="#__codelineno-64-21">21</a></span>
+<span class="normal"><a href="#__codelineno-64-22">22</a></span>
+<span class="normal"><a href="#__codelineno-64-23">23</a></span>
+<span class="normal"><a href="#__codelineno-64-24">24</a></span>
+<span class="normal"><a href="#__codelineno-64-25">25</a></span>
+<span class="normal"><a href="#__codelineno-64-26">26</a></span>
+<span class="normal"><a href="#__codelineno-64-27">27</a></span>
+<span class="normal"><a href="#__codelineno-64-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a><span class="c1"># map</span>
+<a id="__codelineno-64-2" name="__codelineno-64-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">]:</span> <span class="n">bcd</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<a id="__codelineno-64-3" name="__codelineno-64-3"></a>
+<a id="__codelineno-64-4" name="__codelineno-64-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">38</span><span class="p">]:</span> <span class="n">m</span><span class="o">=</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span><span class="n">bcd</span><span class="p">)</span>
+<a id="__codelineno-64-5" name="__codelineno-64-5"></a>
+<a id="__codelineno-64-6" name="__codelineno-64-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">39</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<a id="__codelineno-64-7" name="__codelineno-64-7"></a><span class="n">Out</span><span class="p">[</span><span class="mi">39</span><span class="p">]:</span> <span class="s1">&#39;B&#39;</span>
+<a id="__codelineno-64-8" name="__codelineno-64-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">52</span><span class="p">]:</span> <span class="n">c</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-64-9" name="__codelineno-64-9"></a><span class="c1"># filter</span>
+<a id="__codelineno-64-10" name="__codelineno-64-10"></a><span class="n">In</span> <span class="p">[</span><span class="mi">53</span><span class="p">]:</span> <span class="n">f</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">2</span>
+<a id="__codelineno-64-11" name="__codelineno-64-11"></a>
+<a id="__codelineno-64-12" name="__codelineno-64-12"></a><span class="n">In</span> <span class="p">[</span><span class="mi">54</span><span class="p">]:</span> <span class="n">t</span><span class="o">=</span><span class="nb">filter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-64-13" name="__codelineno-64-13"></a>
+<a id="__codelineno-64-14" name="__codelineno-64-14"></a><span class="n">In</span> <span class="p">[</span><span class="mi">55</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-64-15" name="__codelineno-64-15"></a><span class="n">Out</span><span class="p">[</span><span class="mi">55</span><span class="p">]:</span> <span class="mi">3</span>
+<a id="__codelineno-64-16" name="__codelineno-64-16"></a>
+<a id="__codelineno-64-17" name="__codelineno-64-17"></a><span class="n">In</span> <span class="p">[</span><span class="mi">56</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-64-18" name="__codelineno-64-18"></a><span class="n">Out</span><span class="p">[</span><span class="mi">56</span><span class="p">]:</span> <span class="mi">4</span>
+<a id="__codelineno-64-19" name="__codelineno-64-19"></a><span class="c1"># reversed</span>
+<a id="__codelineno-64-20" name="__codelineno-64-20"></a><span class="n">In</span> <span class="p">[</span><span class="mi">57</span><span class="p">]:</span> <span class="n">t</span><span class="o">=</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<a id="__codelineno-64-21" name="__codelineno-64-21"></a>
+<a id="__codelineno-64-22" name="__codelineno-64-22"></a><span class="n">In</span> <span class="p">[</span><span class="mi">58</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-64-23" name="__codelineno-64-23"></a><span class="n">Out</span><span class="p">[</span><span class="mi">58</span><span class="p">]:</span> <span class="mi">4</span>
+<a id="__codelineno-64-24" name="__codelineno-64-24"></a><span class="c1"># zip</span>
+<a id="__codelineno-64-25" name="__codelineno-64-25"></a><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<a id="__codelineno-64-26" name="__codelineno-64-26"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-64-27" name="__codelineno-64-27"></a>    <span class="o">...</span><span class="p">:</span> <span class="p">)</span>
+<a id="__codelineno-64-28" name="__codelineno-64-28"></a><span class="n">Out</span><span class="p">[</span><span class="mi">59</span><span class="p">]:</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>generators</li>
+</ul>
+<p>a generator function is a function that yields values intead of returning them</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-65-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-65-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-65-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-65-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-65-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-65-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-65-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-65-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-65-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">60</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">haveatry</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-65-2" name="__codelineno-65-2"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span>
+<a id="__codelineno-65-3" name="__codelineno-65-3"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="o">-</span><span class="n">x</span>
+<a id="__codelineno-65-4" name="__codelineno-65-4"></a>    <span class="o">...</span><span class="p">:</span>     
+<a id="__codelineno-65-5" name="__codelineno-65-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">=</span><span class="n">haveatry</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-65-6" name="__codelineno-65-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">64</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-65-7" name="__codelineno-65-7"></a><span class="n">Out</span><span class="p">[</span><span class="mi">64</span><span class="p">]:</span> <span class="mi">4</span>
+<a id="__codelineno-65-8" name="__codelineno-65-8"></a>
+<a id="__codelineno-65-9" name="__codelineno-65-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">65</span><span class="p">]:</span> <span class="nb">next</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-65-10" name="__codelineno-65-10"></a><span class="n">Out</span><span class="p">[</span><span class="mi">65</span><span class="p">]:</span> <span class="o">-</span><span class="mi">4</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>generator and iterator</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="n">a</span> <span class="k">yield from</span> <span class="n">statement</span> <span class="k">yield</span> <span class="nb">all</span> <span class="n">values</span> <span class="kn">from</span> <span class="nn">an</span> <span class="n">iterator</span> <span class="ow">or</span> <span class="n">iterable</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>generator function with return statemennt</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-67-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-67-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-67-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-67-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-67-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-67-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-67-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-67-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-67-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-67-10">10</a></span>
+<span class="normal"><a href="#__codelineno-67-11">11</a></span>
+<span class="normal"><a href="#__codelineno-67-12">12</a></span>
+<span class="normal"><a href="#__codelineno-67-13">13</a></span>
+<span class="normal"><a href="#__codelineno-67-14">14</a></span>
+<span class="normal"><a href="#__codelineno-67-15">15</a></span>
+<span class="normal"><a href="#__codelineno-67-16">16</a></span>
+<span class="normal"><a href="#__codelineno-67-17">17</a></span>
+<span class="normal"><a href="#__codelineno-67-18">18</a></span>
+<span class="normal"><a href="#__codelineno-67-19">19</a></span>
+<span class="normal"><a href="#__codelineno-67-20">20</a></span>
+<span class="normal"><a href="#__codelineno-67-21">21</a></span>
+<span class="normal"><a href="#__codelineno-67-22">22</a></span>
+<span class="normal"><a href="#__codelineno-67-23">23</a></span>
+<span class="normal"><a href="#__codelineno-67-24">24</a></span>
+<span class="normal"><a href="#__codelineno-67-25">25</a></span>
+<span class="normal"><a href="#__codelineno-67-26">26</a></span>
+<span class="normal"><a href="#__codelineno-67-27">27</a></span>
+<span class="normal"><a href="#__codelineno-67-28">28</a></span>
+<span class="normal"><a href="#__codelineno-67-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="c1"># upon executing a return statement,a generator function exits and cannot yield any values</span>
+<a id="__codelineno-67-2" name="__codelineno-67-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-67-3" name="__codelineno-67-3"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span>
+<a id="__codelineno-67-4" name="__codelineno-67-4"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<a id="__codelineno-67-5" name="__codelineno-67-5"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span>
+<a id="__codelineno-67-6" name="__codelineno-67-6"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>
+<a id="__codelineno-67-7" name="__codelineno-67-7"></a>   <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-67-8" name="__codelineno-67-8"></a>
+<a id="__codelineno-67-9" name="__codelineno-67-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a id="__codelineno-67-10" name="__codelineno-67-10"></a><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-67-11" name="__codelineno-67-11"></a><span class="c1"># providing a value to be returned is allowed,but this value is not yielded</span>
+<a id="__codelineno-67-12" name="__codelineno-67-12"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-67-13" name="__codelineno-67-13"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span>
+<a id="__codelineno-67-14" name="__codelineno-67-14"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<a id="__codelineno-67-15" name="__codelineno-67-15"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>
+<a id="__codelineno-67-16" name="__codelineno-67-16"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">x</span><span class="o">+</span><span class="mi">3</span>
+<a id="__codelineno-67-17" name="__codelineno-67-17"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-67-18" name="__codelineno-67-18"></a>
+<a id="__codelineno-67-19" name="__codelineno-67-19"></a><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a id="__codelineno-67-20" name="__codelineno-67-20"></a><span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-67-21" name="__codelineno-67-21"></a><span class="c1"># it is possible to access the returned value </span>
+<a id="__codelineno-67-22" name="__codelineno-67-22"></a>
+<a id="__codelineno-67-23" name="__codelineno-67-23"></a><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-67-24" name="__codelineno-67-24"></a>    <span class="o">...</span><span class="p">:</span>     <span class="n">y</span><span class="o">=</span><span class="k">yield from</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-67-25" name="__codelineno-67-25"></a>    <span class="o">...</span><span class="p">:</span>     <span class="k">yield</span> <span class="n">y</span>
+<a id="__codelineno-67-26" name="__codelineno-67-26"></a>    <span class="o">...</span><span class="p">:</span>
+<a id="__codelineno-67-27" name="__codelineno-67-27"></a>
+<a id="__codelineno-67-28" name="__codelineno-67-28"></a><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a id="__codelineno-67-29" name="__codelineno-67-29"></a><span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="lectrue2-efficiency">lectrue2-efficiency<a class="headerlink" href="#lectrue2-efficiency" title="Permanent link"></a></h3>
+<ul>
+<li>measuring efficiency</li>
+</ul>
 
 
 
