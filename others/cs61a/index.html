@@ -895,6 +895,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#week5" class="md-nav__link">
+    <span class="md-ellipsis">
+      week5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lecture1-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      lecture1-tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1453,6 +1477,30 @@
   <a href="#lectrue2-efficiency" class="md-nav__link">
     <span class="md-ellipsis">
       lectrue2-efficiency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week5" class="md-nav__link">
+    <span class="md-ellipsis">
+      week5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lecture1-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      lecture1-tree
     </span>
   </a>
   
@@ -3453,8 +3501,120 @@ len can calculate the lenth in list</p>
 </code></pre></div></td></tr></table></div>
 <h3 id="lectrue2-efficiency">lectrue2-efficiency<a class="headerlink" href="#lectrue2-efficiency" title="Permanent link"></a></h3>
 <ul>
-<li>measuring efficiency</li>
+<li>
+<p>measuring efficiency</p>
+</li>
+<li>
+<p>exponentiation</p>
+</li>
 </ul>
+<blockquote>
+<p>fast exp</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
+<span class="normal"><a href="#__codelineno-68-2">2</a></span>
+<span class="normal"><a href="#__codelineno-68-3">3</a></span>
+<span class="normal"><a href="#__codelineno-68-4">4</a></span>
+<span class="normal"><a href="#__codelineno-68-5">5</a></span>
+<span class="normal"><a href="#__codelineno-68-6">6</a></span>
+<span class="normal"><a href="#__codelineno-68-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">fast_exp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-68-2" name="__codelineno-68-2"></a>    <span class="o">...</span><span class="p">:</span>          <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-68-3" name="__codelineno-68-3"></a>    <span class="o">...</span><span class="p">:</span>              <span class="k">return</span> <span class="mi">1</span>
+<a id="__codelineno-68-4" name="__codelineno-68-4"></a>    <span class="o">...</span><span class="p">:</span>          <span class="k">elif</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-68-5" name="__codelineno-68-5"></a>    <span class="o">...</span><span class="p">:</span>             <span class="k">return</span> <span class="n">square</span><span class="p">(</span><span class="n">fast_exp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-68-6" name="__codelineno-68-6"></a>    <span class="o">...</span><span class="p">:</span>          <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-68-7" name="__codelineno-68-7"></a>    <span class="o">...</span><span class="p">:</span>              <span class="k">return</span> <span class="n">fast_exp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">b</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p>orders of growth</p>
+</li>
+<li>
+<p>memo(a way to imporve efficiency)</p>
+</li>
+</ul>
+<blockquote>
+<p>for example of fib</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-1">1</a></span>
+<span class="normal"><a href="#__codelineno-69-2">2</a></span>
+<span class="normal"><a href="#__codelineno-69-3">3</a></span>
+<span class="normal"><a href="#__codelineno-69-4">4</a></span>
+<span class="normal"><a href="#__codelineno-69-5">5</a></span>
+<span class="normal"><a href="#__codelineno-69-6">6</a></span>
+<span class="normal"><a href="#__codelineno-69-7">7</a></span>
+<span class="normal"><a href="#__codelineno-69-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">memo</span> <span class="o">=</span> <span class="p">{}):</span>
+<a id="__codelineno-69-2" name="__codelineno-69-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-69-3" name="__codelineno-69-3"></a>   <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="mi">0</span>
+<a id="__codelineno-69-4" name="__codelineno-69-4"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-69-5" name="__codelineno-69-5"></a>   <span class="o">...</span><span class="p">:</span>         <span class="k">return</span> <span class="mi">1</span>
+<a id="__codelineno-69-6" name="__codelineno-69-6"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">elif</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
+<a id="__codelineno-69-7" name="__codelineno-69-7"></a>   <span class="o">...</span><span class="p">:</span>         <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">memo</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">memo</span><span class="p">)</span>
+<a id="__codelineno-69-8" name="__codelineno-69-8"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="week5">week5<a class="headerlink" href="#week5" title="Permanent link"></a></h2>
+<h3 id="lecture1-tree">lecture1-tree<a class="headerlink" href="#lecture1-tree" title="Permanent link"></a></h3>
+<ul>
+<li>tree class</li>
+</ul>
+<p>recursive description:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-70-1">1</a></span>
+<span class="normal"><a href="#__codelineno-70-2">2</a></span>
+<span class="normal"><a href="#__codelineno-70-3">3</a></span>
+<span class="normal"><a href="#__codelineno-70-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1"></a><span class="n">a</span> <span class="n">tree</span> <span class="n">has</span> <span class="n">a</span> <span class="n">root</span> <span class="n">label</span> <span class="ow">and</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">branches</span>
+<a id="__codelineno-70-2" name="__codelineno-70-2"></a><span class="n">each</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">tree</span>
+<a id="__codelineno-70-3" name="__codelineno-70-3"></a><span class="n">a</span> <span class="n">tree</span> <span class="k">with</span> <span class="n">zero</span> <span class="n">branches</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">a</span> <span class="n">leaf</span>
+<a id="__codelineno-70-4" name="__codelineno-70-4"></a><span class="n">a</span> <span class="n">tree</span> <span class="n">starts</span> <span class="n">at</span> <span class="n">the</span> <span class="n">root</span>
+</code></pre></div></td></tr></table></div>
+<p>tree class:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-71-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-71-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-71-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-71-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-71-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-71-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-71-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-71-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-71-10">10</a></span>
+<span class="normal"><a href="#__codelineno-71-11">11</a></span>
+<span class="normal"><a href="#__codelineno-71-12">12</a></span>
+<span class="normal"><a href="#__codelineno-71-13">13</a></span>
+<span class="normal"><a href="#__codelineno-71-14">14</a></span>
+<span class="normal"><a href="#__codelineno-71-15">15</a></span>
+<span class="normal"><a href="#__codelineno-71-16">16</a></span>
+<span class="normal"><a href="#__codelineno-71-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1"></a><span class="k">class</span> <span class="nc">TreeNode</span><span class="p">:</span>
+<a id="__codelineno-71-2" name="__codelineno-71-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<a id="__codelineno-71-3" name="__codelineno-71-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># 当前节点的值</span>
+<a id="__codelineno-71-4" name="__codelineno-71-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 列表，包含子节点</span>
+<a id="__codelineno-71-5" name="__codelineno-71-5"></a>
+<a id="__codelineno-71-6" name="__codelineno-71-6"></a>    <span class="k">def</span> <span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child_node</span><span class="p">):</span>
+<a id="__codelineno-71-7" name="__codelineno-71-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child_node</span><span class="p">)</span>  <span class="c1"># 添加子节点</span>
+<a id="__codelineno-71-8" name="__codelineno-71-8"></a>
+<a id="__codelineno-71-9" name="__codelineno-71-9"></a>    <span class="k">def</span> <span class="nf">remove_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child_node</span><span class="p">):</span>
+<a id="__codelineno-71-10" name="__codelineno-71-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">child_node</span><span class="p">)</span>  <span class="c1"># 移除子节点</span>
+<a id="__codelineno-71-11" name="__codelineno-71-11"></a>
+<a id="__codelineno-71-12" name="__codelineno-71-12"></a>    <span class="k">def</span> <span class="nf">traverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-71-13" name="__codelineno-71-13"></a>        <span class="n">nodes_to_visit</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span>
+<a id="__codelineno-71-14" name="__codelineno-71-14"></a>        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes_to_visit</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-71-15" name="__codelineno-71-15"></a>            <span class="n">current_node</span> <span class="o">=</span> <span class="n">nodes_to_visit</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<a id="__codelineno-71-16" name="__codelineno-71-16"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">current_node</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<a id="__codelineno-71-17" name="__codelineno-71-17"></a>            <span class="n">nodes_to_visit</span> <span class="o">+=</span> <span class="n">current_node</span><span class="o">.</span><span class="n">children</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>tree mutation</li>
+</ul>
+<blockquote>
+<p>example:pruning tree</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span>
+<span class="normal"><a href="#__codelineno-72-2">2</a></span>
+<span class="normal"><a href="#__codelineno-72-3">3</a></span>
+<span class="normal"><a href="#__codelineno-72-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a><span class="k">def</span> <span class="nf">prune</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2"></a>  <span class="n">t</span><span class="o">.</span><span class="n">branches</span><span class="o">=</span><span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">branches</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">label</span><span class="o">!=</span><span class="n">b</span><span class="p">]</span>
+<a id="__codelineno-72-3" name="__codelineno-72-3"></a>  <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">branches</span><span class="p">:</span>
+<a id="__codelineno-72-4" name="__codelineno-72-4"></a>    <span class="n">prune</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
 
