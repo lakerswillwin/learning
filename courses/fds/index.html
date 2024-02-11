@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#算法分析基础" class="md-skip">
+        <a href="#fds" class="md-skip">
           Skip to content
         </a>
       
@@ -576,6 +576,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -603,6 +605,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -650,6 +654,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      practice
+    </span>
+  </a>
   
 </li>
       
@@ -706,6 +719,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -755,6 +770,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      practice
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -773,8 +797,7 @@
   
 
 
-  <h1>fds</h1>
-
+<h1 id="fds">fds<a class="headerlink" href="#fds" title="Permanent link"></a></h1>
 <h2 id="算法分析基础">算法分析基础<a class="headerlink" href="#算法分析基础" title="Permanent link"></a></h2>
 <h2 id="基础数据结构链表栈队列">基础数据结构：链表、栈、队列<a class="headerlink" href="#基础数据结构链表栈队列" title="Permanent link"></a></h2>
 <h3 id="链表">链表<a class="headerlink" href="#链表" title="Permanent link"></a></h3>
@@ -784,7 +807,6 @@
 <li>单向链表只能向一个方向遍历，每个节点只有指向下一个节点的链接。
 双向链表的每个节点都有两个链接，一个指向前一个节点，另一个指向后一个节点。</li>
 <li>循环链表是一种特殊类型的链表，其中最后一个元素指向第一个元素，形成一个闭环。</li>
-<li></li>
 <li>下面是一个在C语言中定义链表节点和进行简单操作的示例：</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -993,6 +1015,230 @@
 <a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<h2 id="practice">practice<a class="headerlink" href="#practice" title="Permanent link"></a></h2>
+<blockquote>
+<p>六度空间</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nl">输入格式</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">输入第1行给出两个正整数</span><span class="err">，</span><span class="n">分别表示社交网络图的结点数N</span><span class="err">（</span><span class="mi">1</span><span class="o">&lt;</span><span class="n">N</span><span class="err">≤</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="err">，</span><span class="n">表示人数</span><span class="err">）、</span><span class="n">边数M</span><span class="err">（≤</span><span class="mi">33</span><span class="err">×</span><span class="n">N</span><span class="err">，</span><span class="n">表示社交关系数</span><span class="err">）。</span><span class="n">随后的M行对应M条边</span><span class="err">，</span><span class="n">每行给出一对正整数</span><span class="err">，</span><span class="n">分别是该条边直接连通的两个结点的编号</span><span class="err">（</span><span class="n">节点从1到N编号</span><span class="err">）。</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nl">输出格式</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">对每个结点输出与该结点距离不超过6的结点数占结点总数的百分比</span><span class="err">，</span><span class="n">精确到小数点后2位</span><span class="err">。</span><span class="n">每个结节点输出一行</span><span class="err">，</span><span class="n">格式为</span><span class="err">“</span><span class="n">结点编号</span><span class="o">:</span><span class="err">（</span><span class="n">空格</span><span class="err">）</span><span class="n">百分比</span><span class="o">%</span><span class="err">”。</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span>
+<span class="normal"><a href="#__codelineno-3-51">51</a></span>
+<span class="normal"><a href="#__codelineno-3-52">52</a></span>
+<span class="normal"><a href="#__codelineno-3-53">53</a></span>
+<span class="normal"><a href="#__codelineno-3-54">54</a></span>
+<span class="normal"><a href="#__codelineno-3-55">55</a></span>
+<span class="normal"><a href="#__codelineno-3-56">56</a></span>
+<span class="normal"><a href="#__codelineno-3-57">57</a></span>
+<span class="normal"><a href="#__codelineno-3-58">58</a></span>
+<span class="normal"><a href="#__codelineno-3-59">59</a></span>
+<span class="normal"><a href="#__codelineno-3-60">60</a></span>
+<span class="normal"><a href="#__codelineno-3-61">61</a></span>
+<span class="normal"><a href="#__codelineno-3-62">62</a></span>
+<span class="normal"><a href="#__codelineno-3-63">63</a></span>
+<span class="normal"><a href="#__codelineno-3-64">64</a></span>
+<span class="normal"><a href="#__codelineno-3-65">65</a></span>
+<span class="normal"><a href="#__codelineno-3-66">66</a></span>
+<span class="normal"><a href="#__codelineno-3-67">67</a></span>
+<span class="normal"><a href="#__codelineno-3-68">68</a></span>
+<span class="normal"><a href="#__codelineno-3-69">69</a></span>
+<span class="normal"><a href="#__codelineno-3-70">70</a></span>
+<span class="normal"><a href="#__codelineno-3-71">71</a></span>
+<span class="normal"><a href="#__codelineno-3-72">72</a></span>
+<span class="normal"><a href="#__codelineno-3-73">73</a></span>
+<span class="normal"><a href="#__codelineno-3-74">74</a></span>
+<span class="normal"><a href="#__codelineno-3-75">75</a></span>
+<span class="normal"><a href="#__codelineno-3-76">76</a></span>
+<span class="normal"><a href="#__codelineno-3-77">77</a></span>
+<span class="normal"><a href="#__codelineno-3-78">78</a></span>
+<span class="normal"><a href="#__codelineno-3-79">79</a></span>
+<span class="normal"><a href="#__codelineno-3-80">80</a></span>
+<span class="normal"><a href="#__codelineno-3-81">81</a></span>
+<span class="normal"><a href="#__codelineno-3-82">82</a></span>
+<span class="normal"><a href="#__codelineno-3-83">83</a></span>
+<span class="normal"><a href="#__codelineno-3-84">84</a></span>
+<span class="normal"><a href="#__codelineno-3-85">85</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cp">#include</span><span class="cpf">&lt;string.h&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="cp">#define MAXN 10005</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">VNode</span><span class="o">*</span><span class="w"> </span><span class="n">Vertex</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">struct</span><span class="w"> </span><span class="nc">VNode</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">Next</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">};</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">LNode</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">FirstEdge</span><span class="p">;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">}</span><span class="n">List</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">GNode</span><span class="o">*</span><span class="w"> </span><span class="n">Graph</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="k">struct</span><span class="w"> </span><span class="nc">GNode</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Nv</span><span class="p">,</span><span class="n">Ne</span><span class="p">;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">Head</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">};</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">NewNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Vertex</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">VNode</span><span class="p">));</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="n">NewNode</span><span class="o">-&gt;</span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="n">NewNode</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">w</span><span class="p">].</span><span class="n">FirstEdge</span><span class="p">;</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">w</span><span class="p">].</span><span class="n">FirstEdge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NewNode</span><span class="p">;</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="n">NewNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Vertex</span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">VNode</span><span class="p">));</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">    </span><span class="n">NewNode</span><span class="o">-&gt;</span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">    </span><span class="n">NewNode</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">FirstEdge</span><span class="p">;</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">    </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">FirstEdge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NewNode</span><span class="p">;</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="p">}</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="kt">int</span><span class="w"> </span><span class="n">visit</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="kt">void</span><span class="w"> </span><span class="nf">BFS</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Q</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">rear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tail</span><span class="p">,</span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">kase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">perc</span><span class="p">;</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">    </span><span class="n">Q</span><span class="p">[</span><span class="o">++</span><span class="n">rear</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">    </span><span class="n">visit</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span><span class="n">cnt</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">rear</span><span class="o">!=</span><span class="n">front</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Q</span><span class="p">[</span><span class="o">++</span><span class="n">front</span><span class="p">];</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">FirstEdge</span><span class="p">;</span><span class="n">p</span><span class="p">;</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">visit</span><span class="p">[</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">V</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">                </span><span class="n">Q</span><span class="p">[</span><span class="o">++</span><span class="n">rear</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">V</span><span class="p">;</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">                </span><span class="n">visit</span><span class="p">[</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">V</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">                </span><span class="n">cnt</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">                </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">V</span><span class="p">;</span>
+<a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="o">==</span><span class="n">last</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">            </span><span class="n">level</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60"></a><span class="w">            </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span>
+<a id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="w">    </span><span class="n">perc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">cnt</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Nv</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<a id="__codelineno-3-65" name="__codelineno-3-65"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d: %.2lf%%</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">kase</span><span class="p">,</span><span class="n">perc</span><span class="p">);</span>
+<a id="__codelineno-3-66" name="__codelineno-3-66"></a><span class="p">}</span>
+<a id="__codelineno-3-67" name="__codelineno-3-67"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-3-68" name="__codelineno-3-68"></a><span class="p">{</span>
+<a id="__codelineno-3-69" name="__codelineno-3-69"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-3-70" name="__codelineno-3-70"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">;</span>
+<a id="__codelineno-3-71" name="__codelineno-3-71"></a><span class="w">    </span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Graph</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">GNode</span><span class="p">));</span>
+<a id="__codelineno-3-72" name="__codelineno-3-72"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Nv</span><span class="p">,</span><span class="o">&amp;</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Ne</span><span class="p">);</span>
+<a id="__codelineno-3-73" name="__codelineno-3-73"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Nv</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-74" name="__codelineno-3-74"></a><span class="w">        </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Head</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">FirstEdge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-3-75" name="__codelineno-3-75"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Ne</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-76" name="__codelineno-3-76"></a><span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="o">&amp;</span><span class="n">w</span><span class="p">);</span>
+<a id="__codelineno-3-77" name="__codelineno-3-77"></a><span class="w">        </span><span class="n">Insert</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">);</span>
+<a id="__codelineno-3-78" name="__codelineno-3-78"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">Nv</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-80" name="__codelineno-3-80"></a><span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">visit</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">visit</span><span class="p">));</span>
+<a id="__codelineno-3-81" name="__codelineno-3-81"></a><span class="w">        </span><span class="n">BFS</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-3-82" name="__codelineno-3-82"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-83" name="__codelineno-3-83"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-84" name="__codelineno-3-84"></a>
+<a id="__codelineno-3-85" name="__codelineno-3-85"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>畅通工程最小花费</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">某地区经过对城镇交通状况的调查</span><span class="err">，</span><span class="n">得到现有城镇间快速道路的统计数据</span><span class="err">，</span><span class="n">并提出</span><span class="err">“</span><span class="n">畅通工程</span><span class="err">”</span><span class="n">的目标</span><span class="err">：</span><span class="n">使整个地区任何两个城镇间都可以实现快速交通</span><span class="err">（</span><span class="n">但不一定有直接的快速道路相连</span><span class="err">，</span><span class="n">只要互相间接通过快速路可达即可</span><span class="err">）。</span><span class="n">现得到城镇道路统计表</span><span class="err">，</span><span class="n">表中列出了任意两城镇间修建快速路的费用</span><span class="err">，</span><span class="n">以及该道路是否已经修通的状态</span><span class="err">。</span><span class="n">现请你编写程序</span><span class="err">，</span><span class="n">计算出全地区畅通需要的最低成本</span><span class="err">。</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nl">输入格式</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">输入的第一行给出村庄数目N</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="err">≤</span><span class="n">N</span><span class="err">≤</span><span class="mi">100</span><span class="p">)</span><span class="err">；</span><span class="n">随后的N</span><span class="p">(</span><span class="n">N</span><span class="err">−</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="n">行对应村庄间道路的成本及修建状态</span><span class="err">：</span><span class="n">每行给出4个正整数</span><span class="err">，</span><span class="n">分别是两个村庄的编号</span><span class="err">（</span><span class="n">从1编号到N</span><span class="err">），</span><span class="n">此两村庄间道路的成本</span><span class="err">，</span><span class="n">以及修建状态</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="mi">1</span><span class="n">表示已建</span><span class="err">，</span><span class="mi">0</span><span class="n">表示未建</span><span class="err">。</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nl">输出格式</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">输出全省畅通需要的最低成本</span><span class="err">。</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="mf">1.</span><span class="n">这题一看就是求解最小生成树的题目</span><span class="err">，</span><span class="n">显然用普利姆算法最为合适</span><span class="err">，</span><span class="n">就是一个更新最小值</span><span class="err">，</span><span class="n">然后选最小的就行</span><span class="err">。</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="n">输入</span><span class="err">：</span><span class="n">根据输入样例</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">     </span><span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="o">:</span><span class="n">有四个村子</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">     </span><span class="n">给的是村子1和2</span><span class="w"> </span><span class="n">村子1和3</span><span class="err">…</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">     </span><span class="n">后几行的第三个数字是无论是修建好还是未修建所需要的花费</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">     </span><span class="n">第四个数字为修建状态</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="mf">2.</span><span class="n">这道题是求</span><span class="err">“</span><span class="n">计算出全地区畅通需要的最低成本</span><span class="err">”，</span><span class="n">所以已经修建好的路不再需要花费</span><span class="err">，</span><span class="n">这道题输出的就是没连通路的花费</span><span class="err">、</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="mf">3.</span><span class="n">所以查找没在那个集合的的顶点</span><span class="err">（</span><span class="n">村子</span><span class="err">），</span><span class="n">然后找到最小的权重值和</span><span class="err">（</span><span class="n">畅通的总花费</span><span class="err">）。（</span><span class="n">像最小生成树</span><span class="err">）</span>
+</code></pre></div></td></tr></table></div>
+<p>普利姆算法 <a href="https://blog.csdn.net/ccc369639963/article/details/122621467?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170763684316800211553854%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170763684316800211553854&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-122621467-null-null.142^v99^pc_search_result_base6&amp;utm_term=%E6%99%AE%E5%88%A9%E5%A7%86%E7%AE%97%E6%B3%95&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/ccc369639963/article/details/122621467?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170763684316800211553854%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170763684316800211553854&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-122621467-null-null.142^v99^pc_search_result_base6&amp;utm_term=%E6%99%AE%E5%88%A9%E5%A7%86%E7%AE%97%E6%B3%95&amp;spm=1018.2226.3001.4187</a></p>
 <script>
 MathJax = {
   tex: {
@@ -1001,6 +1247,7 @@ MathJax = {
 };
 </script>
 <script id="MathJax-script" async
+
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
