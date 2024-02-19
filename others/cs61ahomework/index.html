@@ -530,9 +530,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lab3" class="md-nav__link">
+  <a href="#project2-cats" class="md-nav__link">
     <span class="md-ellipsis">
-      lab3
+      project2-cats
     </span>
   </a>
   
@@ -699,9 +699,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lab3" class="md-nav__link">
+  <a href="#project2-cats" class="md-nav__link">
     <span class="md-ellipsis">
-      lab3
+      project2-cats
     </span>
   </a>
   
@@ -737,6 +737,7 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <details>
+
 <summary>answer</summary>Function 88 </details>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -758,11 +759,78 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">p</span>
 </code></pre></div></td></tr></table></div>
 <details>
+
 <summary>answer</summary>Error  'int' object is not callable
 ; 4 ; Nothing
  </details>
 
-<h2 id="lab3">lab3<a class="headerlink" href="#lab3" title="Permanent link"></a></h2>
+<h2 id="project2-cats">project2-cats<a class="headerlink" href="#project2-cats" title="Permanent link"></a></h2>
+<blockquote>
+<p>split and remove_punctuation(used in problem2)</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">s_list</span><span class="o">=</span><span class="n">split</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Return</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">words</span> <span class="n">contained</span> <span class="ow">in</span> <span class="n">s</span><span class="p">,</span> <span class="n">which</span> <span class="n">are</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">characters</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">whitespace</span> <span class="p">(</span><span class="n">spaces</span><span class="p">,</span> <span class="n">tabs</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span><span class="o">.</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">split</span><span class="p">(</span><span class="s2">&quot;It&#39;s a lovely day, don&#39;t you think?&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">[</span><span class="s2">&quot;It&#39;s&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;lovely&#39;</span><span class="p">,</span> <span class="s1">&#39;day,&#39;</span><span class="p">,</span> <span class="s2">&quot;don&#39;t&quot;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;think?&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">Return</span> <span class="n">a</span> <span class="n">string</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">contents</span> <span class="k">as</span> <span class="n">s</span><span class="p">,</span> <span class="n">but</span> <span class="k">with</span> <span class="n">punctuation</span> <span class="n">removed</span><span class="o">.</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot;It&#39;s a lovely day, don&#39;t you think?&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="s1">&#39;Its a lovely day dont you think&#39;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot;Its a lovely day dont you think&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="s1">&#39;Its a lovely day dont you think&#39;</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>切片操作(used in problem6)</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">,</span><span class="n">curr_goal</span><span class="p">,</span><span class="n">cnt</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>        <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>            <span class="k">return</span> <span class="n">limit</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">curr_start</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">curr_goal</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>            <span class="k">return</span> <span class="n">cnt</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="k">elif</span> <span class="ow">not</span> <span class="n">curr_start</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">curr_goal</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>        <span class="k">elif</span> <span class="n">curr_start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">typed</span><span class="p">,</span><span class="n">reference</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="c1">#在Python中，curr[1:]这个表达式是在进行切片操作。这个表达式表示从curr这个序列（这个序列可能是列表、元组或字符串等）中，取出下标为1的元素到最后一个元素组成的子序列。Python的切片操作非常强大，基本形式是[start:end]，其中start是起始下标，end是结束下标，切片的结果包含start对应的元素，但不包含end对应的元素。</span>
+</code></pre></div></td></tr></table></div>
 
 
 
