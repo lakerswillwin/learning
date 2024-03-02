@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cs61a/">
+        <link rel="prev" href="../cs61ahomework/">
       
       
-        <link rel="next" href="../the%20missing%20semester/">
+        <link rel="next" href="../../courses/c/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>cs61ahomework - lane的学习站点</title>
+        <title>the missing semester - lane的学习站点</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab2" class="md-skip">
+        <a href="#the-missing-semester" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cs61ahomework
+              the missing semester
             
           </span>
         </div>
@@ -476,6 +476,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs61ahomework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cs61ahomework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -485,12 +506,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    cs61ahomework
+    the missing semester
   </span>
   
 
@@ -501,7 +524,7 @@
         
   
   <span class="md-ellipsis">
-    cs61ahomework
+    the missing semester
   </span>
   
 
@@ -513,6 +536,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -521,18 +546,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lab2" class="md-nav__link">
+  <a href="#lectrue-1-the-shellbased-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      lab2
+      lectrue 1-the shell(based on LINUX)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project2-cats" class="md-nav__link">
+  <a href="#lectrue2-shell-tools-and-scripting" class="md-nav__link">
     <span class="md-ellipsis">
-      project2-cats
+      lectrue2-shell tools and scripting
     </span>
   </a>
   
@@ -542,27 +567,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../the%20missing%20semester/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    the missing semester
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -703,6 +707,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -711,18 +717,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lab2" class="md-nav__link">
+  <a href="#lectrue-1-the-shellbased-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      lab2
+      lectrue 1-the shell(based on LINUX)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project2-cats" class="md-nav__link">
+  <a href="#lectrue2-shell-tools-and-scripting" class="md-nav__link">
     <span class="md-ellipsis">
-      project2-cats
+      lectrue2-shell tools and scripting
     </span>
   </a>
   
@@ -746,48 +752,78 @@
   
 
 
-  <h1>cs61ahomework</h1>
-
-<h2 id="lab2">lab2<a class="headerlink" href="#lab2" title="Permanent link"></a></h2>
+<h1 id="the-missing-semester">the missing semester<a class="headerlink" href="#the-missing-semester" title="Permanent link"></a></h1>
+<h2 id="lectrue-1-the-shellbased-on-linux">lectrue 1-the shell(based on LINUX)<a class="headerlink" href="#lectrue-1-the-shellbased-on-linux" title="Permanent link"></a></h2>
+<blockquote>
+<p>环境变量</p>
+</blockquote>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">x</span>  <span class="c1"># Lambdas can return other lambdas!</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">(</span><span class="mi">88</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>└─$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">#获取环境变量（环境变量(environment variables)一般是指在操作系统中用来指定操作系统运行环境的一些参数） 配置完成后不用在安装目录中打开或运行文件 直接可以通过cmd进行运行</span>
 </code></pre></div></td></tr></table></div>
-<details>
-
-<summary>answer</summary>Function 88 </details>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span>
-<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">higher_order_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">higer_order_lambda</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="n">g</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">higer_order_lambda</span><span class="p">(</span><span class="n">g</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">p</span><span class="o">=</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="mi">1</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">p</span>
-</code></pre></div></td></tr></table></div>
-<details>
-
-<summary>answer</summary>Error  'int' object is not callable
-; 4 ; Nothing
- </details>
-
-<h2 id="project2-cats">project2-cats<a class="headerlink" href="#project2-cats" title="Permanent link"></a></h2>
 <blockquote>
-<p>split and remove_punctuation(used in problem2)</p>
+<p>路径</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">pwd</span><span class="w"> </span><span class="c1">#打印当前路径</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w">  </span><span class="c1">#变换目录</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>/home<span class="o">]</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>└─$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>kali
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>└─$<span class="w"> </span>ls<span class="w"> </span><span class="c1">#列出根目录下的子目录</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Desktop<span class="w">  </span>Documents<span class="w">  </span>Downloads<span class="w">  </span>Music<span class="w">  </span>Pictures<span class="w">  </span>Public<span class="w">  </span>Templates<span class="w">  </span>Videos
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>└─$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..<span class="w">  </span><span class="c1">#进入根目录</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>/home<span class="o">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>└─$<span class="w"> </span>ls
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>kali<span class="w">  </span>lost+found
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="c1">#在Linux系统中，波浪符号（~）在命令行中表示当前用户的主目录。它是一个简便的方式来访问和引用当前用户的主目录路径。例如，如果当前用户是&quot;john&quot;，那么波浪符号（~）将代表&quot;/home/john&quot;。以下是一些使用波浪符号的例子：</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>--<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="c1">#获得更多信息</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>└─$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w">    </span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>total<span class="w"> </span><span class="m">30128</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>-rwxrw-rw-<span class="w"> </span><span class="m">1</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w"> </span><span class="m">30847579</span><span class="w"> </span>Feb<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">23</span>:29<span class="w"> </span>passport.txt
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="nb">cd</span><span class="w"> </span>/
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>ls<span class="w"> </span>-l<span class="w"> </span><span class="c1">#会发现权限拥有者为root 即为everyone</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>文件操作</p>
 </blockquote>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -803,55 +839,183 @@
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">s_list</span><span class="o">=</span><span class="n">split</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">(</span><span class="n">lower</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Return</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">words</span> <span class="n">contained</span> <span class="ow">in</span> <span class="n">s</span><span class="p">,</span> <span class="n">which</span> <span class="n">are</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">characters</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">whitespace</span> <span class="p">(</span><span class="n">spaces</span><span class="p">,</span> <span class="n">tabs</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span><span class="o">.</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">split</span><span class="p">(</span><span class="s2">&quot;It&#39;s a lovely day, don&#39;t you think?&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">[</span><span class="s2">&quot;It&#39;s&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;lovely&#39;</span><span class="p">,</span> <span class="s1">&#39;day,&#39;</span><span class="p">,</span> <span class="s2">&quot;don&#39;t&quot;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;think?&#39;</span><span class="p">]</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">Return</span> <span class="n">a</span> <span class="n">string</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">contents</span> <span class="k">as</span> <span class="n">s</span><span class="p">,</span> <span class="n">but</span> <span class="k">with</span> <span class="n">punctuation</span> <span class="n">removed</span><span class="o">.</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot;It&#39;s a lovely day, don&#39;t you think?&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="s1">&#39;Its a lovely day dont you think&#39;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="o">&gt;&gt;&gt;</span> <span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot;Its a lovely day dont you think&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="s1">&#39;Its a lovely day dont you think&#39;</span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>└─$<span class="w"> </span>mv<span class="w"> </span>passport.txt<span class="w"> </span>solvewifi.txt
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># 类似于重命名                                                                                                                                                                       </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>└─$<span class="w"> </span>ls<span class="w">   </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>solvewifi.txt
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>└─$<span class="w"> </span>cp<span class="w"> </span>solvewifi.txt<span class="w"> </span>../haveatry.txt
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># 复制并且指定路径                                                                                                                                                                                                                                         </span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>└─$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..<span class="w">                           </span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>└─$<span class="w"> </span>ls
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>Desktop<span class="w">  </span>Documents<span class="w">  </span>Downloads<span class="w">  </span>Music<span class="w">  </span>Pictures<span class="w">  </span>Public<span class="w">  </span>Templates<span class="w">  </span>Videos<span class="w">  </span>haveatry.txt
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>└─$<span class="w"> </span>rm<span class="w"> </span>../haveatry.txt
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="c1">#删除文件</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>rmdir<span class="w"> </span><span class="c1">#清空该目录下的所有文件</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a>mkdir<span class="w"> </span><span class="c1">#创建新的目录</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>pay<span class="w"> </span>attention
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>└─$<span class="w"> </span>mkdir<span class="w"> </span>my<span class="w"> </span>code<span class="w">                </span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a>└─$<span class="w"> </span>ls
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a>code<span class="w">  </span>my<span class="w">  </span>solvewifi.txt
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a>└─$<span class="w"> </span>mkdir<span class="w"> </span><span class="s2">&quot;my code&quot;</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop<span class="o">]</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a>└─$<span class="w"> </span>ls
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w"> </span>code<span class="w">   </span>my<span class="w">  </span><span class="s1">&#39;my code&#39;</span><span class="w">   </span>solvewifi.txt
 </code></pre></div></td></tr></table></div>
 <blockquote>
-<p>切片操作(used in problem6)</p>
+<p>手册</p>
 </blockquote>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">,</span><span class="n">curr_goal</span><span class="p">,</span><span class="n">cnt</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>        <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>            <span class="k">return</span> <span class="n">limit</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">curr_start</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">curr_goal</span><span class="p">:</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>            <span class="k">return</span> <span class="n">cnt</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="k">elif</span> <span class="ow">not</span> <span class="n">curr_start</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">curr_goal</span><span class="p">:</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>        <span class="k">elif</span> <span class="n">curr_start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span><span class="p">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>            <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">curr_start</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">curr_goal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="k">return</span> <span class="n">counts</span><span class="p">(</span><span class="n">typed</span><span class="p">,</span><span class="n">reference</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="c1">#在Python中，curr[1:]这个表达式是在进行切片操作。这个表达式表示从curr这个序列（这个序列可能是列表、元组或字符串等）中，取出下标为1的元素到最后一个元素组成的子序列。Python的切片操作非常强大，基本形式是[start:end]，其中start是起始下标，end是结束下标，切片的结果包含start对应的元素，但不包含end对应的元素。</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>man+“command”
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>ctrl<span class="w"> </span>+<span class="w"> </span>l<span class="w"> </span><span class="c1">#清除终端并返回</span>
 </code></pre></div></td></tr></table></div>
+<blockquote>
+<p>链接不同的文件（shell中强大的功能）</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>└─$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>&gt;hello.txt
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>└─$<span class="w"> </span>cat<span class="w"> </span>hello.txt
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>hello
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1"># cat命令用来打印文件的内容</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>└─$<span class="w"> </span>cat<span class="w"> </span>hello.c<span class="w"> </span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="c1"># include&lt;stdio.h&gt;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>int<span class="w"> </span>main<span class="o">()</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="o">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>printf<span class="o">(</span><span class="s2">&quot;what a fucking world&quot;</span><span class="o">)</span><span class="p">;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">return</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="o">}</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>└─$<span class="w"> </span>ls<span class="w">                </span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>hello.c<span class="w">  </span>hello.txt<span class="w">  </span>hello1.c
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a>└─$<span class="w"> </span>&lt;hello.txt&gt;<span class="w"> </span>hello.c
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>└─$<span class="w"> </span>cat<span class="w"> </span>hello.c
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>hello
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1"># 重定向操作，并且在命令前使用cat不会影响任何东西</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="c1">#&lt;hello.c&gt;&gt;hello1.c 双端链接表示追加</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>管道</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">#在Linux中，“|”符号被称为管道（pipe）操作符。管道在Unix和Linux中被用于将一个程序的输出（STDOUT）连接到另一个程序的输入（STDIN）。这是一种在线程之间传输信息的方法。</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>└─$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n1<span class="w"> </span>&gt;<span class="w"> </span>ls.txt
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># tali通常查看文件的最后一行该命令行将管道与前文的交互式进行综合                                                                                                                                                                                                                                       </span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>└─$<span class="w"> </span>ls<span class="w">                      </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>Desktop<span class="w">  </span>Documents<span class="w">  </span>Downloads<span class="w">  </span>Music<span class="w">  </span>Pictures<span class="w">  </span>Public<span class="w">  </span>Templates<span class="w">  </span>Videos<span class="w">  </span>ls.txt
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>└─$<span class="w"> </span>cat<span class="w"> </span>ls.txt<span class="w">  </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>kali<span class="w"> </span>kali<span class="w">    </span><span class="m">0</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">17</span>:58<span class="w"> </span>ls.txt
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1"># tee命令</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="c1"># tee 是一个Unix和Linux常用的命令行工具，它主要用于在将输出内容重定向到文件的同时，也在终端显示输出结果。tee 命令的名称来源于T型管道，其形象地解释了 tee 的功能: 它会将输入从一个位置（如：一个命令的输出）分流到两个位置（如：屏幕和一个文件）。</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>└─$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;what a fucking world&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>hello.txt
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>what<span class="w"> </span>a<span class="w"> </span>fucking<span class="w"> </span>world
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/Desktop/my<span class="w"> </span>code<span class="o">]</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>└─$<span class="w"> </span>cat<span class="w"> </span>hello.txt
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>what<span class="w"> </span>a<span class="w"> </span>fucking<span class="w"> </span>world
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>进入管理员权限</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>su<span class="w"> </span><span class="c1">#切换身份</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="lectrue2-shell-tools-and-scripting">lectrue2-shell tools and scripting<a class="headerlink" href="#lectrue2-shell-tools-and-scripting" title="Permanent link"></a></h2>
 
 
 
