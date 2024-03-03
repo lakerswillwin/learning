@@ -1016,6 +1016,47 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>su<span class="w"> </span><span class="c1">#切换身份</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="lectrue2-shell-tools-and-scripting">lectrue2-shell tools and scripting<a class="headerlink" href="#lectrue2-shell-tools-and-scripting" title="Permanent link"></a></h2>
+<blockquote>
+<p>shell中类似于高级语言的东西</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>lane@lane-virtual-machine:~$<span class="w"> </span><span class="nv">foo</span><span class="o">=</span>bar
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>lane@lane-virtual-machine:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$foo</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>bar
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>lane@lane-virtual-machine:~$<span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bar
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>找不到命令<span class="w"> </span>“foo”，
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>lane@lane-virtual-machine:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;value is </span><span class="nv">$foo</span><span class="s2">&quot;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>value<span class="w"> </span>is<span class="w"> </span>bar<span class="w"> </span><span class="c1">#但是单引号￥foo无法被替换</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>source 加载脚本函数</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>lane@lane-virtual-machine:~$<span class="w"> </span>vim<span class="w"> </span>mcd.sh
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>lane@lane-virtual-machine:~$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>mcd.sh<span class="w"> </span><span class="c1">#mcd函数加载进shell中</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>lane@lane-virtual-machine:~$<span class="w"> </span>mcd<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="c1">#执行函数</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>lane@lane-virtual-machine:~/test$<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>bash变量</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">#$? 返回上一条指令的成功与否（1为失败，0为成功）</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>lane@lane-virtual-machine:~/test$<span class="w"> </span><span class="nb">true</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>lane@lane-virtual-machine:~/test$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="m">0</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1">#并且逻辑运算符与c语言一致</span>
+</code></pre></div></td></tr></table></div>
 
 
 
