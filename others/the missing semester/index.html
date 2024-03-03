@@ -1051,11 +1051,40 @@
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">#$? 返回上一条指令的成功与否（1为失败，0为成功）</span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">#$? 返回上一条指令的成功与否（1为失败，0为成功）</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>lane@lane-virtual-machine:~/test$<span class="w"> </span><span class="nb">true</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>lane@lane-virtual-machine:~/test$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="m">0</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1">#并且逻辑运算符与c语言一致</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">#$(pwd)打印路径</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>example.sh(一个例子)(Bash是一种命令语言,通常运行于文本窗口中能执行用户直接输入的命令，还能从SH文件中读取命令一般作为内置于操作系统的应用程序向用户提供访问操作系统内核的服务。)</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;starting program at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;running program </span><span class="nv">$0</span><span class="s2"> with </span><span class="nv">$#</span><span class="s2"> arguments with pid </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">  </span>grep<span class="w"> </span>foobar<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;File </span><span class="nv">$file</span><span class="s2"> does not have any foobar,adding one&quot;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# foobar&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">  </span><span class="k">fi</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="k">done</span>
 </code></pre></div></td></tr></table></div>
 
 
