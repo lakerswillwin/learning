@@ -584,6 +584,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#如何在终端进行创立写入并编译运行c-文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何在终端进行创立，写入并编译运行.c 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#查看命令如何使用" class="md-nav__link">
     <span class="md-ellipsis">
       查看命令如何使用
@@ -801,6 +810,15 @@
   
     <nav class="md-nav" aria-label="shell tools">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#如何在终端进行创立写入并编译运行c-文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何在终端进行创立，写入并编译运行.c 文件
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#查看命令如何使用" class="md-nav__link">
@@ -1062,7 +1080,7 @@
 <a id="__codelineno-4-27" name="__codelineno-4-27"></a>hello
 <a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1"># 重定向操作，并且在命令前使用cat不会影响任何东西</span>
 <a id="__codelineno-4-29" name="__codelineno-4-29"></a>&lt;<span class="w"> </span>file1<span class="w"> </span><span class="c1">#重定向file1至输入流</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a>&gt;<span class="w"> </span>file2<span class="w"> </span><span class="c1">#重定向file2至输出流</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>&gt;<span class="w"> </span>file2<span class="w"> </span><span class="c1">#重定向file2至输出流 例如 ls &gt; filelist.txt (将当前目录的内容列表输出到filelist.txt，覆盖文件原有内容 )</span>
 <a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="c1">#&lt;hello.c&gt;&gt;hello1.c 双端链接表示追加</span>
 </code></pre></div></td></tr></table></div>
 <blockquote>
@@ -1250,6 +1268,19 @@
 <a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="c1"># 会移动所有 *.py 和 *.sh 文件</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="shell-tools">shell tools<a class="headerlink" href="#shell-tools" title="Permanent link"></a></h3>
+<h4 id="如何在终端进行创立写入并编译运行c-文件">如何在终端进行创立，写入并编译运行.c 文件<a class="headerlink" href="#如何在终端进行创立写入并编译运行c-文件" title="Permanent link"></a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>touch<span class="w"> </span>hello.c
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>vim<span class="w"> </span>hello.c<span class="w"> </span><span class="c1">#进入vim编写页面</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="c1">#首先点击“i” 进入插入模式，我们此时可以进行文件的编写</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="c1">#然后编写完成后，点击“esc”，在点击“：wq”保存并推出</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>gcc<span class="w"> </span>hello.c<span class="w"> </span>-o<span class="w"> </span>out<span class="w"> </span>-Wall<span class="w"> </span><span class="c1">#编译并生成out.exe 执行文件</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>./out<span class="w"> </span><span class="c1">#执行文件 </span>
+</code></pre></div></td></tr></table></div>
 <h4 id="查看命令如何使用">查看命令如何使用<a class="headerlink" href="#查看命令如何使用" title="Permanent link"></a></h4>
 <ol>
 <li>对应命令行前添加--help</li>
@@ -1259,25 +1290,28 @@
 <ul>
 <li>所有的类unix系统都包含find命令 ，其会递归地搜索符合条件的所有文件</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span>
-<span class="normal"><a href="#__codelineno-14-5">5</a></span>
-<span class="normal"><a href="#__codelineno-14-6">6</a></span>
-<span class="normal"><a href="#__codelineno-14-7">7</a></span>
-<span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1"># 查找所有名称为src的文件夹</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>src<span class="w"> </span>-type<span class="w"> </span>d
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="c1"># 查找所有文件夹路径中包含test的python文件</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s1">&#39;*/test/*.py&#39;</span><span class="w"> </span>-type<span class="w"> </span>f
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="c1"># 查找前一天修改的所有文件</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a>find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>-1
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="c1"># 查找所有大小在500k至10M的tar.gz文件</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8"></a>find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+500k<span class="w"> </span>-size<span class="w"> </span>-10M<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.tar.gz&#39;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span>
+<span class="normal"><a href="#__codelineno-15-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1"># 查找所有名称为src的文件夹</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>src<span class="w"> </span>-type<span class="w"> </span>d
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="c1"># 查找所有文件夹路径中包含test的python文件</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s1">&#39;*/test/*.py&#39;</span><span class="w"> </span>-type<span class="w"> </span>f
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="c1"># 查找前一天修改的所有文件</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>-1
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="c1"># 查找所有大小在500k至10M的tar.gz文件</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+500k<span class="w"> </span>-size<span class="w"> </span>-10M<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.tar.gz&#39;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>除了查找文件还可通过对查找到的文件进行操作（利用-exec+操作{}+)</li>
 </ul>
+<p>更高效的工具：</p>
+<p>fd 就是一个更简单、更快速、更友好的程序，它可以用来作为find的替代品。它有很多不错的默认设置，例如输出着色、默认支持正则匹配、支持unicode并且它的语法更符合直觉。以模式PATTERN 搜索的语法是 fd PATTERN。</p>
+<p>locate ： 通过编译索引或建立数据库的方式来实现更加快速地搜索。locate 使用一个由 updatedb负责更新的数据库，在大多数系统中 updatedb 都会通过 cron每日更新。这便需要我们在速度和时效性之间作出权衡。locate只能通过文件名检索。</p>
 
 
 
