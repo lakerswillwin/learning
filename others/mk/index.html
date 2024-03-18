@@ -801,6 +801,8 @@
 然后打开终端输入以下命令
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>code --no--sandbox
 </code></pre></div></td></tr></table></div></p>
+<p>4.fatal: unable to access 'https://github.com/lakerswillwin/learning/': Failure when receiving data from the peer</p>
+<p>因为今天我发现自己的GitHub怎么也打不开，所以我先在C：/windows：/system32/etc 中找到host文件，将GitHub.com和github.global.ssl.fastly.net的ip地址写入文件中（需要以管理员身份运行），然后打开终端 ipconfig /flushdns 进行刷新DNS缓存。再将代码托管时，我用 git config --global --unset https.proxy 将git代理取消，因为本地已经存在SSR，然后进行仓库的拷贝即可。 </p>
 
 
 
